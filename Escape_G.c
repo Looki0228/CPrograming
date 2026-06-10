@@ -11,25 +11,24 @@
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable : 4996)
 
-//°ÔÀÓ ½ºÅ×ÀÌÁö ÀÌµ¿
+//ê²Œì„ ìŠ¤í…Œì´ì§€ ì´ë™
 int floor_change = 0;
-//(4Ãş °ÔÀÓ ÀÔÀå / ¸Ê ÀÌµ¿)
+//(4ì¸µ ê²Œì„ ì…ì¥ / ë§µ ì´ë™)
 int key_floor4 = 0;
 
-//È­¸é Á¦°Å
+//í™”ë©´ ì œê±°
 void clearscreen_floor4() {
     printf("[\033[2J\033[1;1f");
 }
 
-//¿£ÅÍ ÀÔ·Â
+//ì—”í„° ì…ë ¥
 void pressenter_floor4() {
     while (getchar() != '\n');
 }
 
-//°ÔÀÓ ¿ÀÇÁ´×
+//ê²Œì„ ì˜¤í”„ë‹
 void showOpening() {
     clearscreen_floor4();
-    printf("\033[2J\033[1;1f");
     printf("===================================================================\n");
     printf("  ______   ______   ______   ______    ______   ______     ______  \n");
     printf(" |  ____| /  ____| /  ____| /  __  \\  |  ___ \\ |  ____|   |  ____| \n");
@@ -43,36 +42,36 @@ void showOpening() {
     printf("\033[11;1f");
 }
 
-//¿ÀÇÁ´× ½ºÅä¸®
+//ì˜¤í”„ë‹ ìŠ¤í† ë¦¬
 void opening_story() {
     clearscreen_floor4();
     printf("\n\n\n\n");
-    printf("                         ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ                          \n");
+    printf("                         ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡                          \n");
     printf("                         |              |                          \n");
     printf("                         |   \033[33m23 : 05    \033[0m|                          \n");
-    printf("         ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ|              |¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ\n");
+    printf("         ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡|              |ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡\n");
     printf("        /                |              |                   / |\n");
-    printf("       /                 ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ                  /  /\n");
-    printf("      /                / ¤±¤±¤±¤±¤±¤±¤± /                 /  /| \n");
-    printf("     /                / ¤±¤±¤±¤±¤±¤±¤± /                 /  /  \n");
-    printf("    /                / ¤±¤±¤±¤±¤±¤±¤± /                 /  /   \n");
-    printf("   /                 ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ                  /  /    \n");
+    printf("       /                 ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡                  /  /\n");
+    printf("      /                / ã…ã…ã…ã…ã…ã…ã… /                 /  /| \n");
+    printf("     /                / ã…ã…ã…ã…ã…ã…ã… /                 /  /  \n");
+    printf("    /                / ã…ã…ã…ã…ã…ã…ã… /                 /  /   \n");
+    printf("   /                 ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡                  /  /    \n");
     printf("  /                                                   /  /     \n");
-    printf(" ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ/  /      \n");
+    printf(" ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡/  /      \n");
     printf(" |                                                   | /       \n");
-    printf(" ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ| |       \n");
+    printf(" ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡| |       \n");
     printf("  |   | |                                        |   | |       \n");
     printf("  |   | |                                        |   | |       \n");
     printf("  |   | |                                        |   | |       \n");
     printf("===============================================================\n\n");
-    printf("   °úÁ¦¸¦ ÇÏ´Ù°¡ °ú¹æ¿¡¼­ Àá±ñ ¾şµå·Á Àä´Ù.                   \n");
-    printf("   ±úº¸´Ï °ú¹æ¿¡´Â ¾Æ¹«µµ ¾ø°í ½Ã°£Àº 11½Ã°¡ ³Ñ¾ú´Ù.          \n");
-    printf("   ¸·Â÷°¡ ²÷±â±â Àü¿¡ °Ç¹°¿¡¼­ ³ª°¡¾ß ÇÑ´Ù!                   \n\n");
+    printf("   ê³¼ì œë¥¼ í•˜ë‹¤ê°€ ê³¼ë°©ì—ì„œ ì ê¹ ì—ë“œë ¤ ì¤ë‹¤.                   \n");
+    printf("   ê¹¨ë³´ë‹ˆ ê³¼ë°©ì—ëŠ” ì•„ë¬´ë„ ì—†ê³  ì‹œê°„ì€ 11ì‹œê°€ ë„˜ì—ˆë‹¤.          \n");
+    printf("   ë§‰ì°¨ê°€ ëŠê¸°ê¸° ì „ì— ê±´ë¬¼ì—ì„œ ë‚˜ê°€ì•¼ í•œë‹¤!                   \n\n");
     printf("===============================================================\n\n");
-    printf("°ÔÀÓÀ» ½ÃÀÛÇÏ·Á¸é 'ENTER'¸¦ ´©¸£¼¼¿ä");
+    printf("ê²Œì„ì„ ì‹œì‘í•˜ë ¤ë©´ 'ENTER'ë¥¼ ëˆ„ë¥´ì„¸ìš”");
 }
 
-//ÀÎÆ®·Î - °ÔÀÓ ½ÃÀÛ
+//ì¸íŠ¸ë¡œ - ê²Œì„ ì‹œì‘
 void game_start() {
     showOpening();
     pressenter_floor4();
@@ -82,12 +81,12 @@ void game_start() {
     return;
 }
 
-//4Ãş - °ú¹æ ¸Ê Ãâ·Â
+//4ì¸µ - ê³¼ë°© ë§µ ì¶œë ¥
 char map1symbol_floor4[20][1024] = {
     "  ",
     "\033[48;2;169;169;169m  \033[0m",
-    "\033[38;2;160;82;45m¹®\033[0m",
-    "\033[38;2;160;82;45m¤Ñ\033[0m",
+    "\033[38;2;160;82;45më¬¸\033[0m",
+    "\033[38;2;160;82;45mã…¡\033[0m",
     "\033[38;2;160;82;45m |\033[0m",
     "\033[38;2;160;82;45m__\033[0m",
     "\033[38;2;160;82;45m \\\033[0m",
@@ -107,7 +106,7 @@ void printmap1_floor4(int map1_floor4[12][17]) {
     }
 }
 
-//4Ãş - °ú¹æ Ä³¸¯ÅÍ ÀÌµ¿
+//4ì¸µ - ê³¼ë°© ìºë¦­í„° ì´ë™
 void map1move_floor4(char direction, int* row, int* column, int map1_floor4[12][17]) {
     if (((direction == 'w') || (direction == 'W')) &&
         (0 < *row) &&
@@ -159,7 +158,7 @@ void map1move_floor4(char direction, int* row, int* column, int map1_floor4[12][
         (*column)++;
 }
 
-//4Ãş - °ú¹æ ¸Ê
+//4ì¸µ - ê³¼ë°© ë§µ
 int map1_floor4[12][17] = {
         { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1 },
         { 1,4,4,0,1,0,0,11,1,0,0,0,1,0,0,0,1 },
@@ -175,19 +174,19 @@ int map1_floor4[12][17] = {
         { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
 };
 
-//4Ãş - ¹Ì·Î ¸Ê Ãâ·Â
+//4ì¸µ - ë¯¸ë¡œ ë§µ ì¶œë ¥
 void printmazemap_floor4(int mazemaps_floor4[7][7]) {
     char symbol[10][1024] = {
-        "  ",//Åõ¸í ¹è°æ (0) ¹Ù´Ú
-        "\033[48;2;169;169;169m  \033[0m",//È¸»ö ¹è°æ (1) º®
-        "\033[41m  \033[0m",//»¡°£»ö ¹è°æ (2) return
-        "\033[44m  \033[0m",//ÆÄ¶õ»ö ¹è°æ (3) True
-        "\033[44m  \033[0m",//ÆÄ¶õ»ö ¹è°æ (4) False
-        "\033[44m  \033[0m",//ÆÄ¶õ»ö ¹è°æ (5) False
-        "\033[48;5;54m  \033[0m",//º¸¶ó»ö ¹è°æ (6) Clear
-        "\033[47m  \033[0m",//Èò»ö ¹è°æ (7) Á¤´ä
-        "\033[43m  \033[0m",//³ë¶õ»ö ¹è°æ (8) ½ÃÀÛÁöÁ¡À¸·Î µ¹¾Æ¿À±â
-        "\033[42m  \033[0m"//ÃÊ·Ï»ö ¹è°æ (9) ¹Ì·Î °ÔÀÓ ½ÃÀÛ
+        "  ",//íˆ¬ëª… ë°°ê²½ (0) ë°”ë‹¥
+        "\033[48;2;169;169;169m  \033[0m",//íšŒìƒ‰ ë°°ê²½ (1) ë²½
+        "\033[41m  \033[0m",//ë¹¨ê°„ìƒ‰ ë°°ê²½ (2) return
+        "\033[44m  \033[0m",//íŒŒë€ìƒ‰ ë°°ê²½ (3) True
+        "\033[44m  \033[0m",//íŒŒë€ìƒ‰ ë°°ê²½ (4) False
+        "\033[44m  \033[0m",//íŒŒë€ìƒ‰ ë°°ê²½ (5) False
+        "\033[48;5;54m  \033[0m",//ë³´ë¼ìƒ‰ ë°°ê²½ (6) Clear
+        "\033[47m  \033[0m",//í°ìƒ‰ ë°°ê²½ (7) ì •ë‹µ
+        "\033[43m  \033[0m",//ë…¸ë€ìƒ‰ ë°°ê²½ (8) ì‹œì‘ì§€ì ìœ¼ë¡œ ëŒì•„ì˜¤ê¸°
+        "\033[42m  \033[0m"//ì´ˆë¡ìƒ‰ ë°°ê²½ (9) ë¯¸ë¡œ ê²Œì„ ì‹œì‘
     };
     printf("\033[2K\033[1;1f");
     for (int row = 0; row < 7; row++) {
@@ -195,16 +194,16 @@ void printmazemap_floor4(int mazemaps_floor4[7][7]) {
             printf("%s", symbol[mazemaps_floor4[row][column]]);
         printf("\n");
     }
-    printf("\033[1;16f°ÔÀÓ ¼³¸í: ÀÌ °ÔÀÓÀº TP¹Ì·ÎÀÔ´Ï´Ù. »ö±ò ¹ßÆÇÀ» ¹âÀ¸¸é ´Ù¸¥ ¸ÊÀ¸·Î ÀÌµ¿ÇÏ´Â ¹Ì·Î °ÔÀÓÀÔ´Ï´Ù.");
-    printf("\033[2;16f*\033[32mÃÊ·Ï»ö ¹ßÆÇ\033[0mÀº ¹Ì·Î °ÔÀÓ ½ÃÀÛ ¹ßÆÇÀÔ´Ï´Ù.");
-    printf("\033[3;16f*\033[33m³ë¶õ»ö ¹ßÆÇ\033[0mÀº ½ÃÀÛ ÁöÁ¡À¸·Î µ¹¾Æ°¡´Â ¹ßÆÇÀÔ´Ï´Ù.");
-    printf("\033[4;16f*\033[31m»¡°£»ö ¹ßÆÇ\033[0mÀº ¹Ì·Î ½ÃÀÛ ÁöÁ¡À¸·Î µÇµ¹¾Æ¿À´Â ¹ßÆÇÀÔ´Ï´Ù.");
-    printf("\033[5;16f*\033[34mÆÄ¶õ»ö ¹ßÆÇ\033[0mÀº ´ÙÀ½ ¸ÊÀ¸·Î TPÇÏ´Â ¹ßÆÇÀÔ´Ï´Ù.");
-    printf("\033[6;16f*\033[38;5;54mº¸¶ó»ö ¹ßÆÇ\033[0mÀº Å¬¸®¾î ¹ßÆÇÀÔ´Ï´Ù.");
-    printf("\033[7;16f*\033[37mÈò»ö ¹ßÆÇ\033[0mÀº Á¤´ä ¹ßÆÇÀÔ´Ï´Ù.");
+    printf("\033[1;16fê²Œì„ ì„¤ëª…: ì´ ê²Œì„ì€ TPë¯¸ë¡œì…ë‹ˆë‹¤. ìƒ‰ê¹” ë°œíŒì„ ë°Ÿìœ¼ë©´ ë‹¤ë¥¸ ë§µìœ¼ë¡œ ì´ë™í•˜ëŠ” ë¯¸ë¡œ ê²Œì„ì…ë‹ˆë‹¤.");
+    printf("\033[2;16f*\033[32mì´ˆë¡ìƒ‰ ë°œíŒ\033[0mì€ ë¯¸ë¡œ ê²Œì„ ì‹œì‘ ë°œíŒì…ë‹ˆë‹¤.");
+    printf("\033[3;16f*\033[33më…¸ë€ìƒ‰ ë°œíŒ\033[0mì€ ì‹œì‘ ì§€ì ìœ¼ë¡œ ëŒì•„ê°€ëŠ” ë°œíŒì…ë‹ˆë‹¤.");
+    printf("\033[4;16f*\033[31më¹¨ê°„ìƒ‰ ë°œíŒ\033[0mì€ ë¯¸ë¡œ ì‹œì‘ ì§€ì ìœ¼ë¡œ ë˜ëŒì•„ì˜¤ëŠ” ë°œíŒì…ë‹ˆë‹¤.");
+    printf("\033[5;16f*\033[34míŒŒë€ìƒ‰ ë°œíŒ\033[0mì€ ë‹¤ìŒ ë§µìœ¼ë¡œ TPí•˜ëŠ” ë°œíŒì…ë‹ˆë‹¤.");
+    printf("\033[6;16f*\033[38;5;54më³´ë¼ìƒ‰ ë°œíŒ\033[0mì€ í´ë¦¬ì–´ ë°œíŒì…ë‹ˆë‹¤.");
+    printf("\033[7;16f*\033[37mí°ìƒ‰ ë°œíŒ\033[0mì€ ì •ë‹µ ë°œíŒì…ë‹ˆë‹¤.");
 }
 
-//4Ãş - ¹Ì·Î Ä³¸¯ÅÍ ÀÌµ¿
+//4ì¸µ - ë¯¸ë¡œ ìºë¦­í„° ì´ë™
 void mazemove_floor4(char direction, int* row, int* column, int mazemaps_floor4[7][7]) {
     if (((direction == 'w') || (direction == 'W')) && (0 < *row) && (mazemaps_floor4[*row - 1][*column] != 1)) {
         (*row)--;
@@ -224,17 +223,17 @@ void mazemove_floor4(char direction, int* row, int* column, int mazemaps_floor4[
     }
 }
 
-//4Ãş - ¹Ì·Î ¸Ê º¯°æ
+//4ì¸µ - ë¯¸ë¡œ ë§µ ë³€ê²½
 void changemazemap_floor4(int* currentmazemap_floor4, int newmazemap_floor4, int* row, int* column, int mazemaps_floor4[27][7][7]) {
     *currentmazemap_floor4 = newmazemap_floor4;
     *row = 3;
     *column = 3;
 
     printmazemap_floor4(mazemaps_floor4[*currentmazemap_floor4]);
-    printf("\033[%d;%df¿Ê", *row + 1, *column * 2 + 1);
+    printf("\033[%d;%dfì˜·", *row + 1, *column * 2 + 1);
 }
 
-//4Ãş - ¹Ì·Î ¸Ê
+//4ì¸µ - ë¯¸ë¡œ ë§µ
 int mazemaps_floor4[27][7][7] = {
     {//START
         { 1,1,1,1,1,1,1 },
@@ -454,7 +453,7 @@ int mazemaps_floor4[27][7][7] = {
         { 1,1,1,1,1,1,1 }, }
 };
 
-//4Ãş - ¹Ì·Î °ÔÀÓ
+//4ì¸µ - ë¯¸ë¡œ ê²Œì„
 void mazegame_floor4() {
     int currentMap_floor4 = 0;
     int row = 3, column = 3;
@@ -466,14 +465,14 @@ void mazegame_floor4() {
     for (int mazeexit_floor4 = 0; mazeexit_floor4 == 0; ) {
         printf("\033[%d;%df  ", row + 1, column * 2 + 1);
         mazemove_floor4(direction, &row, &column, mazemaps_floor4[currentMap_floor4]);
-        printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+        printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
         if (currentMap_floor4 == 0) {
             if (mazemaps_floor4[currentMap_floor4][row][column] == 9) {
                 changemazemap_floor4(&currentMap_floor4, 1, &row, &column, mazemaps_floor4);
             }
             else if (mazemaps_floor4[currentMap_floor4][row][column] == 7) {
                 changemazemap_floor4(&currentMap_floor4, 0, &row, &column, mazemaps_floor4);
-                printf("\033[10;1fÁ¤´äÀº °ÔÀÓ ½ÃÀÛ ÈÄ '¾Æ·¡ -> ¿ŞÂÊ -> ¿ŞÂÊ -> ¾Æ·¡ -> ¿À¸¥ÂÊ -> ¾Æ·¡ \n-> ¾Æ·¡ -> ¿À¸¥ÂÊ -> ¿À¸¥ÂÊ -> ¾Æ·¡ -> ¿ŞÂÊ -> ¾Æ·¡ -> ¾Æ·¡'ÀÔ´Ï´Ù.");
+                printf("\033[10;1fì •ë‹µì€ ê²Œì„ ì‹œì‘ í›„ 'ì•„ë˜ -> ì™¼ìª½ -> ì™¼ìª½ -> ì•„ë˜ -> ì˜¤ë¥¸ìª½ -> ì•„ë˜ \n-> ì•„ë˜ -> ì˜¤ë¥¸ìª½ -> ì˜¤ë¥¸ìª½ -> ì•„ë˜ -> ì™¼ìª½ -> ì•„ë˜ -> ì•„ë˜'ì…ë‹ˆë‹¤.");
             }
         }
         if (currentMap_floor4 == 1) {
@@ -531,7 +530,7 @@ void mazegame_floor4() {
                 currentMap_floor4 = 26;
                 row = 5, column = 3;
                 printmazemap_floor4(mazemaps_floor4[currentMap_floor4]);
-                printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+                printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
             }
             else if (mazemaps_floor4[currentMap_floor4][row][column] == 5) {
                 changemazemap_floor4(&currentMap_floor4, 15, &row, &column, mazemaps_floor4);
@@ -541,7 +540,7 @@ void mazegame_floor4() {
             currentMap_floor4 = 26;
             row = 3, column = 5;
             printmazemap_floor4(mazemaps_floor4[currentMap_floor4]);
-            printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+            printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
         }
         if (currentMap_floor4 == 12) {
             if (mazemaps_floor4[currentMap_floor4][row][column] == 3) {
@@ -553,7 +552,7 @@ void mazegame_floor4() {
         }
         if ((currentMap_floor4 == 13) && (mazemaps_floor4[currentMap_floor4][row][column] == 2)) {
             changemazemap_floor4(&currentMap_floor4, 1, &row, &column, mazemaps_floor4);
-            printf("\033[9;1f¿©±â ¾Æ´ÏÁö·Õ ¤»¤»");
+            printf("\033[9;1fì—¬ê¸° ì•„ë‹ˆì§€ë¡± ã…‹ã…‹");
             fflush(stdout);
             sleep(1.5);
             printf("\033[9;1f                    ");
@@ -565,7 +564,7 @@ void mazegame_floor4() {
             currentMap_floor4 = 26;
             row = 3, column = 1;
             printmazemap_floor4(mazemaps_floor4[currentMap_floor4]);
-            printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+            printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
         }
         if (currentMap_floor4 == 16) {
             if (mazemaps_floor4[currentMap_floor4][row][column] == 4) {
@@ -575,7 +574,7 @@ void mazegame_floor4() {
                 currentMap_floor4 = 26;
                 row = 1, column = 3;
                 printmazemap_floor4(mazemaps_floor4[currentMap_floor4]);
-                printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+                printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
             }
         }
         if (currentMap_floor4 == 17) {
@@ -609,13 +608,13 @@ void mazegame_floor4() {
             currentMap_floor4 = 26;
             row = 5, column = 3;
             printmazemap_floor4(mazemaps_floor4[currentMap_floor4]);
-            printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+            printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
         }
         if ((currentMap_floor4 == 21) && (mazemaps_floor4[currentMap_floor4][row][column] == 4)) {
             currentMap_floor4 = 26;
             row = 3, column = 5;
             printmazemap_floor4(mazemaps_floor4[currentMap_floor4]);
-            printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+            printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
         }
         if (currentMap_floor4 == 22) {
             if (mazemaps_floor4[currentMap_floor4][row][column] == 3) {
@@ -635,44 +634,44 @@ void mazegame_floor4() {
             }
             else if (mazemaps_floor4[currentMap_floor4][row][column] == 2) {
                 changemazemap_floor4(&currentMap_floor4, 1, &row, &column, mazemaps_floor4);
-                printf("\033[9;1f¿©±â ¾Æ´ÏÁö·Õ ¤»¤»");
+                printf("\033[9;1fì—¬ê¸° ì•„ë‹ˆì§€ë¡± ã…‹ã…‹");
                 fflush(stdout);
                 sleep(1.5);
                 printf("\033[9;1f                    ");
             }
         }
         if ((currentMap_floor4 == 25) && (mazemaps_floor4[currentMap_floor4][row][column] == 6)) {
-            printf("\033[2J");
-            printf("\033[10;1f¿­¼è¸¦ ¾ò¾ú´Ù! ÀÌÁ¦ °ú¹æ¿¡¼­ ³ª°¡ÀÚ!");
-            printf("\033[11;1f\033[2Kµ¹¾Æ°¡·Á¸é 'A' ¶Ç´Â 'a'¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+            clearscreen_floor4();
+            printf("\033[10;1fì—´ì‡ ë¥¼ ì–»ì—ˆë‹¤! ì´ì œ ê³¼ë°©ì—ì„œ ë‚˜ê°€ì!");
+            printf("\033[11;1f\033[2KëŒì•„ê°€ë ¤ë©´ 'A' ë˜ëŠ” 'a'ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
             mazeexit_floor4 = 1;
             key_floor4 = 1;
         }
         if ((currentMap_floor4 == 26) && (mazemaps_floor4[currentMap_floor4][row][column] == 2)) {
             changemazemap_floor4(&currentMap_floor4, 1, &row, &column, mazemaps_floor4);
-            printf("\033[9;1f¿©±â ¾Æ´ÏÁö·Õ ¤»¤»");
+            printf("\033[9;1fì—¬ê¸° ì•„ë‹ˆì§€ë¡± ã…‹ã…‹");
             fflush(stdout);
             sleep(1.5);
             printf("\033[9;1f                    ");
         }
-        printf("\033[8;1f\033[2K¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+        printf("\033[8;1f\033[2Kë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
         scanf("\n%c", &direction);
         printf("\033[9;1f                       ");
         if ((direction != 'w') && (direction != 'W') &&
             (direction != 'a') && (direction != 'A') &&
             (direction != 's') && (direction != 'S') &&
             (direction != 'd') && (direction != 'D')) {
-            printf("\033[8;1f\033[2KÀß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+            printf("\033[8;1f\033[2Kì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤. ë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
             scanf("\n%c", &direction);
         }
     }
-    printf("\033[2J");
+    clearscreen_floor4();
     printmap1_floor4(map1_floor4);
     row = 2, column = 6;
-    printf("\033[2;15f¿Ê");
+    printf("\033[2;15fì˜·");
 }
 
-//4Ãş - ¿öµé °ÔÀÓ
+//4ì¸µ - ì›Œë“¤ ê²Œì„
 int wordle_floor4(int count, char you[6], char wordle[30], char words[200][6], int num) {
     char again;
     while (1) {
@@ -681,10 +680,10 @@ int wordle_floor4(int count, char you[6], char wordle[30], char words[200][6], i
         printf("| ? ? ? ? ? |\n");
         printf("=============\n");
         while (count > 0) {
-            printf("±âÈ¸ %d¹ø ³²¾Ò½À´Ï´Ù.\n´Ü¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ", count);
+            printf("ê¸°íšŒ %dë²ˆ ë‚¨ì•˜ìŠµë‹ˆë‹¤.\në‹¨ì–´ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ", count);
             scanf("%s", you);
             printf("\n");
-            // ´ë¹®ÀÚ -> ¼Ò¹®ÀÚ
+            // ëŒ€ë¬¸ì -> ì†Œë¬¸ì
             for (int i = 0; you[i] != '\0'; i++) {
                 if (you[i] >= 'A' && you[i] <= 'Z') {
                     you[i] += 32;
@@ -696,10 +695,10 @@ int wordle_floor4(int count, char you[6], char wordle[30], char words[200][6], i
             if (!strcmp(wordle, you)) {
                 printf("\033[32m%s\033[0m", you);
                 printf("    |\n=============\n");
-                printf("Á¤´äÀÔ´Ï´Ù!\n");
-                printf("°è´Ü ºñ¹Ğ¹øÈ£ : 71409");
+                printf("ì •ë‹µì…ë‹ˆë‹¤!\n");
+                printf("ê³„ë‹¨ ë¹„ë°€ë²ˆí˜¸ : 71409");
                 sleep(2);
-                printf("\033[2J");
+                clearscreen_floor4();
                 key_floor4 = 10;
                 return 0;
             }
@@ -722,9 +721,9 @@ int wordle_floor4(int count, char you[6], char wordle[30], char words[200][6], i
             printf("    |\n=============\n");
             count--;
         }
-        printf("±âÈ¸¸¦ ¸ğµÎ ¼ÒÁøÇß½À´Ï´Ù!\n");
-        printf("Á¤´ä: %s\n", wordle);
-        printf("³ª°¡·Á¸é ENTER¸¦ ´©¸£¼¼¿ä.");
+        printf("ê¸°íšŒë¥¼ ëª¨ë‘ ì†Œì§„í–ˆìŠµë‹ˆë‹¤!\n");
+        printf("ì •ë‹µ: %s\n", wordle);
+        printf("ë‚˜ê°€ë ¤ë©´ ENTERë¥¼ ëˆ„ë¥´ì„¸ìš”.");
         getchar();
         pressenter_floor4();
         return 0;
@@ -753,19 +752,19 @@ void wordle_start_floor4() {
     char you[6];
     int count = 6;
     int play;
-    printf("\033[2J");
+    clearscreen_floor4();
     do {
         printf("\033[1;1f=======PLAY WORDLE========\n");
         printf("|                        |\n");
-        printf("| 1. ±ÔÄ¢   2. °ÔÀÓ ½ÃÀÛ |\n");
+        printf("| 1. ê·œì¹™   2. ê²Œì„ ì‹œì‘ |\n");
         printf("|                        |\n");
         printf("==========================\n");
         scanf("%d", &play);
         if (play == 1) {
-            printf("±ÛÀÚ¿Í À§Ä¡°¡ ¸ğµÎ ÀÏÄ¡ÇÏ¸é \033[32mÃÊ·Ï»ö\033[0m, ");
-            printf("±Û¾¾´Â ¸ÂÁö¸¸ À§Ä¡°¡ Æ²¸®¸é \033[33m³ë¶õ»ö\033[0m,");
-            printf(" µÑ ´Ù Æ²¸®¸é Èò»öÀ¸·Î Ç¥½ÃµË´Ï´Ù.\n±âÈ¸´Â ÃÑ 6¹ø, ");
-            printf("5±ÛÀÚ ¿µ¾î ´Ü¾î¸¦ ÃßÃøÇÏ¼¼¿ä!\n\n");
+            printf("ê¸€ìì™€ ìœ„ì¹˜ê°€ ëª¨ë‘ ì¼ì¹˜í•˜ë©´ \033[32mì´ˆë¡ìƒ‰\033[0m, ");
+            printf("ê¸€ì”¨ëŠ” ë§ì§€ë§Œ ìœ„ì¹˜ê°€ í‹€ë¦¬ë©´ \033[33më…¸ë€ìƒ‰\033[0m,");
+            printf(" ë‘˜ ë‹¤ í‹€ë¦¬ë©´ í°ìƒ‰ìœ¼ë¡œ í‘œì‹œë©ë‹ˆë‹¤.\nê¸°íšŒëŠ” ì´ 6ë²ˆ, ");
+            printf("5ê¸€ì ì˜ì–´ ë‹¨ì–´ë¥¼ ì¶”ì¸¡í•˜ì„¸ìš”!\n\n");
             wordle_floor4(count, you, wordle, words, num);
         }
         if (play == 2) {
@@ -774,24 +773,24 @@ void wordle_start_floor4() {
     } while (play != 1 && play != 2);
 }
 
-//4Ãş - 4Ãş ¸Ê Ãâ·Â
+//4ì¸µ - 4ì¸µ ë§µ ì¶œë ¥
 char map2symbol_floor4[20][1024] = {
     "  ",
     "\033[48;2;169;169;169m  \033[0m",//1
-    "\033[38;2;160;82;45m¹®\033[0m",//2
-    "\033[32m°è\033[0m",//3
-    "\033[32m´Ü\033[0m",//4
+    "\033[38;2;160;82;45më¬¸\033[0m",//2
+    "\033[32mê³„\033[0m",//3
+    "\033[32më‹¨\033[0m",//4
     "\033[31mXX\033[0m",//5
-    "\033[32m°è\033[0m",//6
-    "\033[32m´Ü\033[0m",//7
+    "\033[32mê³„\033[0m",//6
+    "\033[32më‹¨\033[0m",//7
     "  ",//8
-    "\033[38;2;160;82;45m¹®\033[0m",//9
-    "\033[38;2;160;82;45m¹®\033[0m",//10
-    "\033[38;2;160;82;45m¿¤\033[0m",//11
-    "\033[38;2;160;82;45mº£\033[0m"//12
+    "\033[38;2;160;82;45më¬¸\033[0m",//9
+    "\033[38;2;160;82;45më¬¸\033[0m",//10
+    "\033[38;2;160;82;45mì—˜\033[0m",//11
+    "\033[38;2;160;82;45më² \033[0m"//12
 };
 void printmap2_floor4(int map2_floor4[35][65]) {
-    printf("\033[2J");
+    clearscreen_floor4();
     printf("\033[2K\033[2;1f");
     for (int row = 0; row < 35; row++) {
         for (int column = 0; column < 65; column++) {
@@ -799,12 +798,12 @@ void printmap2_floor4(int map2_floor4[35][65]) {
         }
         printf("\n");
     }
-    printf("\033[1;1f\033[32m¼Ò¹®ÀÚ(wasd)\033[0m·Î 1Ä­, \033[34m´ë¹®ÀÚ(WASD)\033[0m·Î 2Ä­ ÀÌµ¿ÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+    printf("\033[1;1f\033[32mì†Œë¬¸ì(wasd)\033[0më¡œ 1ì¹¸, \033[34mëŒ€ë¬¸ì(WASD)\033[0më¡œ 2ì¹¸ ì´ë™í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 }
 
-//4Ãş - 4Ãş Ä³¸¯ÅÍ ÀÌµ¿
+//4ì¸µ - 4ì¸µ ìºë¦­í„° ì´ë™
 void map2move_floor4(char direction, int* row, int* column, int map2_floor4[35][65]) {
-    //¼Ò¹®ÀÚ ÀÔ·Â
+    //ì†Œë¬¸ì ì…ë ¥
     if ((direction == 'w') && (0 < *row) &&
         (map2_floor4[*row - 1][*column] != 1) &&
         (map2_floor4[*row - 1][*column] != 5) &&
@@ -825,7 +824,7 @@ void map2move_floor4(char direction, int* row, int* column, int map2_floor4[35][
         (map2_floor4[*row][*column + 1] != 5) &&
         (map2_floor4[*row][*column + 1] != 8))
         (*column)++;
-    //´ë¹®ÀÚ ÀÔ·Â
+    //ëŒ€ë¬¸ì ì…ë ¥
     else if ((direction == 'W') && (0 < *row) &&
         (map2_floor4[*row - 1][*column] != 1) &&
         (map2_floor4[*row - 1][*column] != 5) &&
@@ -872,7 +871,7 @@ void map2move_floor4(char direction, int* row, int* column, int map2_floor4[35][
     }
 }
 
-//4Ãş - 4Ãş ¸Ê
+//4ì¸µ - 4ì¸µ ë§µ
 int map2_floor4[35][65] = {
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,1 },
@@ -911,9 +910,9 @@ int map2_floor4[35][65] = {
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
 };
 
-//4Ãş - 4Ãş °ÔÀÓ ÁøÇà
+//4ì¸µ - 4ì¸µ ê²Œì„ ì§„í–‰
 void game_map2_floor4() {
-    printf("\033[2J");
+    clearscreen_floor4();
     printmap2_floor4(map2_floor4);
     int row = 5, column = 9;
     char direction = ' ';
@@ -921,35 +920,35 @@ void game_map2_floor4() {
     do {
         printf("\033[%d;%df%s", row + 2, column * 2 + 1, map2symbol_floor4[map2_floor4[row][column]]);
         map2move_floor4(direction, &row, &column, map2_floor4);
-        printf("\033[%d;%df¿Ê", row + 2, column * 2 + 1);
-        if (map2_floor4[row][column] == 2) { //°ú¹æ
-            printf("\033[38;1fµµ¾î¶ôÀÌ ÀÚµ¿À¸·Î Àá°Ü¹ö·È´Ù. ´Ù½Ã µ¹¾Æ°¥ ¼ö´Â ¾øÀ» °Í °°´Ù.");
+        printf("\033[%d;%dfì˜·", row + 2, column * 2 + 1);
+        if (map2_floor4[row][column] == 2) { //ê³¼ë°©
+            printf("\033[38;1fë„ì–´ë½ì´ ìë™ìœ¼ë¡œ ì ê²¨ë²„ë ¸ë‹¤. ë‹¤ì‹œ ëŒì•„ê°ˆ ìˆ˜ëŠ” ì—†ì„ ê²ƒ ê°™ë‹¤.");
         }
-        if (map2_floor4[row][column] == 3 || map2_floor4[row][column] == 4) { // 4Ãş Å»Ãâ
+        if (map2_floor4[row][column] == 3 || map2_floor4[row][column] == 4) { // 4ì¸µ íƒˆì¶œ
             if (key_floor4 == 10) {
                 while (1) {
                     printf("\033[2J");
                     printf("\033[1;1f _____________________________________________________ \n");
                     printf("|                                                     |\n");
-                    printf("|        ¹®À» ¿­·Á¸é °ü¸®ÀÚ ÄÚµå°¡ ÇÊ¿äÇÕ´Ï´Ù         |\n");
+                    printf("|        ë¬¸ì„ ì—´ë ¤ë©´ ê´€ë¦¬ì ì½”ë“œê°€ í•„ìš”í•©ë‹ˆë‹¤         |\n");
                     printf("|            _____ _____ _____ _____ _____            |\n");
                     printf("|           |     |     |     |     |     |           |\n");
                     printf("|           |     |     |     |     |     |           |\n");
                     printf("|           |     |     |     |     |     |           |\n");
                     printf("|           |_____|_____|_____|_____|_____|           |\n");
                     printf("|_____________________________________________________|\n");
-                    printf("°ü¸®ÀÚ ÄÚµå ÀÔ·Â : ");
+                    printf("ê´€ë¦¬ì ì½”ë“œ ì…ë ¥ : ");
                     scanf("%d", &code_floor4);
                     if (code_floor4 == 71409) {
                         floor_change = 3;
                         return;
                     }
-                    printf("Æ²·È½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇÏ°Ú½À´Ï±î? (y/n): ");
+                    printf("í‹€ë ¸ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•˜ê² ìŠµë‹ˆê¹Œ? (y/n): ");
                     char again;
                     scanf(" %c", &again);
                     if (again != 'y' && again != 'Y') {
                         printmap2_floor4(map2_floor4);
-                        printf("\033[%d;%df¿Ê", row + 2, column * 2 + 1);
+                        printf("\033[%d;%dfì˜·", row + 2, column * 2 + 1);
                         break;
                     }
                 }
@@ -959,7 +958,7 @@ void game_map2_floor4() {
                     printf("\033[2J");
                     printf("\033[1;1f _____________________________________________________ \n");
                     printf("|                                                     |\n");
-                    printf("|        ¹®À» ¿­·Á¸é °ü¸®ÀÚ ÄÚµå°¡ ÇÊ¿äÇÕ´Ï´Ù         |\n");
+                    printf("|        ë¬¸ì„ ì—´ë ¤ë©´ ê´€ë¦¬ì ì½”ë“œê°€ í•„ìš”í•©ë‹ˆë‹¤         |\n");
                     printf("|            _____ _____ _____ _____ _____            |\n");
                     printf("|           |     |     |     |     |     |           |\n");
                     printf("|           |     |     |     |     |     |           |\n");
@@ -967,12 +966,12 @@ void game_map2_floor4() {
                     printf("|           |_____|_____|_____|_____|_____|           |\n");
                     printf("|                                                     |\n");
                     printf("|_____________________________________________________|\n");
-                    printf("3ÃşÀ¸·Î ³»·Á°¡·Á¸é °ü¸®ÀÚ ÄÚµå°¡ ÇÊ¿äÇÏ´Ù.\n");
-                    printf("ENTER¸¦ ´­·¯ µÚ·Î°¡±â");
+                    printf("3ì¸µìœ¼ë¡œ ë‚´ë ¤ê°€ë ¤ë©´ ê´€ë¦¬ì ì½”ë“œê°€ í•„ìš”í•˜ë‹¤.\n");
+                    printf("ENTERë¥¼ ëˆŒëŸ¬ ë’¤ë¡œê°€ê¸°");
                     getchar();
                     pressenter_floor4();
                     printmap2_floor4(map2_floor4);
-                    printf("\033[%d;%df¿Ê", row + 2, column * 2 + 1);
+                    printf("\033[%d;%dfì˜·", row + 2, column * 2 + 1);
                     break;
                 }
             }
@@ -980,30 +979,30 @@ void game_map2_floor4() {
 
         if (map2_floor4[row][column] == 9) { //G418
             if (key_floor4 == 10) {
-                printf("\033[38;1f°è´Ü ºñ¹Ğ¹øÈ£´Â 71409ÀÔ´Ï´Ù.");
+                printf("\033[38;1fê³„ë‹¨ ë¹„ë°€ë²ˆí˜¸ëŠ” 71409ì…ë‹ˆë‹¤.");
             }
             if (key_floor4 != 10) {
-                printf("\033[38;1f°­ÀÇ¿ë ÄÄÇ»ÅÍ°¡ ÄÑÁ®ÀÖ¾î °¡º¸´Ï wordleÀÌ ÄÑÁ®ÀÖ´Ù. °ÔÀÓÀ» ÇØº¸ÀÚ.");
+                printf("\033[38;1fê°•ì˜ìš© ì»´í“¨í„°ê°€ ì¼œì ¸ìˆì–´ ê°€ë³´ë‹ˆ wordleì´ ì¼œì ¸ìˆë‹¤. ê²Œì„ì„ í•´ë³´ì.");
                 sleep(2);
                 wordle_start_floor4();
                 printmap2_floor4(map2_floor4);
-                printf("\033[%d;%df¿Ê", row + 2, column * 2 + 1);
+                printf("\033[%d;%dfì˜·", row + 2, column * 2 + 1);
             }
         }
 
         if (map2_floor4[row][column] == 10) { //G420
-            printf("\033[38;1f°­ÀÇ½ÇÀ» »ô»ôÀÌ »ìÆìº¸¾ÒÁö¸¸ ¾Æ¹«°Íµµ ¹ß°ßÇÏÁö ¸øÇß´Ù. ´Ù¸¥ °­ÀÇ½ÇÀ» °¡ºÁ¾ßÇÒ °Í °°´Ù.");
+            printf("\033[38;1fê°•ì˜ì‹¤ì„ ìƒ…ìƒ…ì´ ì‚´í´ë³´ì•˜ì§€ë§Œ ì•„ë¬´ê²ƒë„ ë°œê²¬í•˜ì§€ ëª»í–ˆë‹¤. ë‹¤ë¥¸ ê°•ì˜ì‹¤ì„ ê°€ë´ì•¼í•  ê²ƒ ê°™ë‹¤.");
         }
 
         if (map2_floor4[row][column] == 6 || map2_floor4[row][column] == 7) {
-            printf("\033[38;1fÀÌ °è´ÜÀº ÀÌ¿ëÇÒ ¼ö ¾ø´Ù. ´Ù¸¥ °è´ÜÀ» ÀÌ¿ëÇØº¸ÀÚ.");
+            printf("\033[38;1fì´ ê³„ë‹¨ì€ ì´ìš©í•  ìˆ˜ ì—†ë‹¤. ë‹¤ë¥¸ ê³„ë‹¨ì„ ì´ìš©í•´ë³´ì.");
         }
 
-        if (map2_floor4[row][column] == 11 || map2_floor4[row][column] == 12) { //¿¤º£
-            printf("\033[38;1fÀÛµ¿ÇÏÁö ¾Ê´Â °Í °°´Ù");
+        if (map2_floor4[row][column] == 11 || map2_floor4[row][column] == 12) { //ì—˜ë² 
+            printf("\033[38;1fì‘ë™í•˜ì§€ ì•ŠëŠ” ê²ƒ ê°™ë‹¤");
         }
 
-        printf("\033[37;1f\033[2K¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+        printf("\033[37;1f\033[2Kë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
         scanf("\n%c", &direction);
         printf("\033[38;1f\033[2K       ");
         printf("\033[39;1f\033[2K       ");
@@ -1011,16 +1010,16 @@ void game_map2_floor4() {
             (direction != 'a') && (direction != 'A') &&
             (direction != 's') && (direction != 'S') &&
             (direction != 'd') && (direction != 'D')) {
-            printf("\033[37;1f\033[2KÀß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+            printf("\033[37;1f\033[2Kì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤. ë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
             scanf(" %c", &direction);
         }
     } while ((direction == 'W') || (direction == 'A') || (direction == 'S') || (direction == 'D') ||
         (direction == 'w') || (direction == 'a') || (direction == 's') || (direction == 'd'));
 }
 
-//4Ãş - °ú¹æ °ÔÀÓ ÁøÇà
+//4ì¸µ - ê³¼ë°© ê²Œì„ ì§„í–‰
 void start_floor4() {
-    printf("\033[2J");
+    clearscreen_floor4();
     printf("\033[10;1f");
     printmap1_floor4(map1_floor4);
     int row = 9, column = 13;
@@ -1028,23 +1027,23 @@ void start_floor4() {
     do {
         printf("\033[%d;%df%s", row + 1, column * 2 + 1, map1symbol_floor4[map1_floor4[row][column]]);
         map1move_floor4(direction, &row, &column, map1_floor4);
-        printf("\033[%d;%df¿Ê", row + 1, column * 2 + 1);
+        printf("\033[%d;%dfì˜·", row + 1, column * 2 + 1);
         if (map1_floor4[row][column] == 2 && key_floor4 == 1) {
             game_map2_floor4();
             return;
         }
         else if (map1_floor4[row][column] == 2 && key_floor4 == 0) {
-            printf("\033[2;38f¹®ÀÌ Àá°ÜÀÖ´Ù. ³ª°¡·Á¸é ¿­¼è°¡ ÇÊ¿äÇÒ °Í °°´Ù.");
-            printf("\033[3;38f¿­¼è¸¦ Ã£¾Æº¸ÀÚ.");
+            printf("\033[2;38fë¬¸ì´ ì ê²¨ìˆë‹¤. ë‚˜ê°€ë ¤ë©´ ì—´ì‡ ê°€ í•„ìš”í•  ê²ƒ ê°™ë‹¤.");
+            printf("\033[3;38fì—´ì‡ ë¥¼ ì°¾ì•„ë³´ì.");
         }
         else if (map1_floor4[row][column] == 11 && key_floor4 == 1) {
-            printf("\033[2;38f¿­¼è¸¦ ¾ò¾úÀ¸´Ï ¹®À» ¿­°í ³ª°¡º¸ÀÚ.");
+            printf("\033[2;38fì—´ì‡ ë¥¼ ì–»ì—ˆìœ¼ë‹ˆ ë¬¸ì„ ì—´ê³  ë‚˜ê°€ë³´ì.");
         }
         else if (map1_floor4[row][column] == 11 && key_floor4 == 0) {
             mazegame_floor4();
         }
 
-        printf("\033[14;1f\033[2K¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+        printf("\033[14;1f\033[2Kë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
         scanf("\n%c", &direction);
         printf("\033[15;1f\033[2K       ");
         printf("\033[16;1f\033[2K       ");
@@ -1052,7 +1051,7 @@ void start_floor4() {
             (direction != 'a') && (direction != 'A') &&
             (direction != 's') && (direction != 'S') &&
             (direction != 'd') && (direction != 'D')) {
-            printf("\033[14;1f\033[2KÀß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+            printf("\033[14;1f\033[2Kì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤. ë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
             scanf(" %c", &direction);
             printf("\033[15;1f\033[2K       ");
             printf("\033[16;1f\033[2K       ");
@@ -1061,88 +1060,88 @@ void start_floor4() {
         (direction == 'w') || (direction == 'a') || (direction == 's') || (direction == 'd'));
 }
 
-//3Ãş - ¿¤º£ ¹æ¹® ¿©ºÎ- 1 == ¹æ¹®ÇÔ, 0 == ¹æ¹®ÇÏÁö ¾ÊÀ½.
+//3ì¸µ - ì—˜ë²  ë°©ë¬¸ ì—¬ë¶€- 1 == ë°©ë¬¸í•¨, 0 == ë°©ë¬¸í•˜ì§€ ì•ŠìŒ.
 int visitedElevator_floor3 = 0;
 
-//3Ãş - È­¸é Áö¿ì±â ÇÔ¼ö
+//3ì¸µ - í™”ë©´ ì§€ìš°ê¸° í•¨ìˆ˜
 void clearScreen_floor3() {
     printf("\033[2J\033[1;1f");
 }
 
-//3Ãş - ¿£ÅÍ ÇÔ¼ö
+//3ì¸µ - ì—”í„° í•¨ìˆ˜
 void pressEnter_floor3() {
     int c;
-    printf("\n  [ Enter Å°¸¦ ´­·¯ °è¼Ó... ]\n");
+    printf("\n  [ Enter í‚¤ë¥¼ ëˆŒëŸ¬ ê³„ì†... ]\n");
     while (getchar() != '\n' && c != EOF);
     getchar();
 }
 
-//3Ãş - 301È£ Àü°æ
+//3ì¸µ - 301í˜¸ ì „ê²½
 void show_301_floor3() {
 
     clearScreen_floor3();
 
-    printf("\n     \033[36m[ 301È£ °­ÀÇ½Ç ]\033[0m\n\n");
+    printf("\n     \033[36m[ 301í˜¸ ê°•ì˜ì‹¤ ]\033[0m\n\n");
 
     printf("  +-----------------------------------------------+\n");
     printf("  |  _________________________________________    |\n");
     printf("  | |                     O                   |   |\n");
-    printf("  | |                 < Ä¥  ÆÇ >              |   |\n");
+    printf("  | |                 < ì¹   íŒ >              |   |\n");
     printf("  | |_________________________________________|   |\n");
-    printf("  |                                  [±³¼ö´Ô ÀÚ¸®]|\n");
+    printf("  |                                  [êµìˆ˜ë‹˜ ìë¦¬]|\n");
     printf("  |   ____   ____   ____   ____   ____            |\n");
     printf("  |  |    | |    | |    | |    | |    |           |\n");
-    printf("  |  |Ã¥»ó| |Ã¥»ó| |Ã¥»ó| |Ã¥»ó| |Ã¥»ó|           |\n");
+    printf("  |  |ì±…ìƒ| |ì±…ìƒ| |ì±…ìƒ| |ì±…ìƒ| |ì±…ìƒ|           |\n");
     printf("  |  |____| |____| |____| |____| |____|           |\n");
     printf("  |   ____   ____   ____   ____   ____            |\n");
     printf("  |  |    | |    | |    | |    | |    |           |\n");
-    printf("  |  |Ã¥»ó| |Ã¥»ó| |Ã¥»ó| |Ã¥»ó| |Ã¥»ó|           |\n");
+    printf("  |  |ì±…ìƒ| |ì±…ìƒ| |ì±…ìƒ| |ì±…ìƒ| |ì±…ìƒ|           |\n");
     printf("  |  |____| |____| |____| |____| |____|           |\n");
     printf("  |                                               |\n");
     printf("  |                                               |\n");
     printf("  +-----------------------------------------------+\n\n");
 
-    printf("  ÅÖ ºó °­ÀÇ½ÇÀÌ´Ù. ¾îµğ¸¦ Á¶»çÇÒ±î?\n\n");
+    printf("  í…… ë¹ˆ ê°•ì˜ì‹¤ì´ë‹¤. ì–´ë””ë¥¼ ì¡°ì‚¬í• ê¹Œ?\n\n");
 
-    printf("  1. Ä¥ÆÇÀ» »ìÆìº»´Ù.\n\n");
-    printf("  2. ½Ã°è¸¦ »ìÆìº»´Ù.\n\n");
-    printf("  3. Ã¥»óÀ» »ìÆìº»´Ù.\n\n");
-    printf("  0. µ¹¾Æ°£´Ù\n\n");
+    printf("  1. ì¹ íŒì„ ì‚´í´ë³¸ë‹¤.\n\n");
+    printf("  2. ì‹œê³„ë¥¼ ì‚´í´ë³¸ë‹¤.\n\n");
+    printf("  3. ì±…ìƒì„ ì‚´í´ë³¸ë‹¤.\n\n");
+    printf("  0. ëŒì•„ê°„ë‹¤\n\n");
 
-    printf("  ¼±ÅÃ >> ");
+    printf("  ì„ íƒ >> ");
 }
 
-//3Ãş - 301È£ ½Ã°è
+//3ì¸µ - 301í˜¸ ì‹œê³„
 void show_clock_ascii_floor3() {
     clearScreen_floor3();
 
     printf("\n");
     printf("          \033[33m      12        \033[0m\n");
-    printf("          \033[33m   .¦¡¦¡¦¡¦¡¦¡.     \033[0m\n");
+    printf("          \033[33m   .â”€â”€â”€â”€â”€.     \033[0m\n");
     printf("          \033[33m  /        \\   \033[0m\n");
     printf("          \033[33m |          |  \033[0m\n");
-    printf("          \033[33m9 ????¦¶     3  \033[0m\n");
+    printf("          \033[33m9 ????â•‹     3  \033[0m\n");
     printf("          \033[33m |          |  \033[0m\n");
     printf("          \033[33m  \\        /  \033[0m\n");
-    printf("          \033[33m   '¦¡¦¡¦¡¦¡¦¡'     \033[0m\n");
+    printf("          \033[33m   'â”€â”€â”€â”€â”€'     \033[0m\n");
     printf("          \033[33m       6        \033[0m\n\n");
 
-    printf("  \033[37m!!... ½Ã°è°¡ ÀÌ»óÇÏ´Ù.\033[0m\n\n");
-    printf("  ½ÃÄ§, ºĞÄ§, ÃÊÄ§... ¼¼ ¹Ù´ÃÀÌ ¸ğµÎ \033[33m9\033[0m¸¦ ÇâÇØ ¸ØÃç ÀÖ´Ù.\n\n");
+    printf("  \033[37m!!... ì‹œê³„ê°€ ì´ìƒí•˜ë‹¤.\033[0m\n\n");
+    printf("  ì‹œì¹¨, ë¶„ì¹¨, ì´ˆì¹¨... ì„¸ ë°”ëŠ˜ì´ ëª¨ë‘ \033[33m9\033[0më¥¼ í–¥í•´ ë©ˆì¶° ìˆë‹¤.\n\n");
 }
 
-//3Ãş - 301È£ ÆÛÁñ
+//3ì¸µ - 301í˜¸ í¼ì¦
 void puzzle_301_floor3() {
 
-    if (visitedElevator_floor3 == 0) {      //¿¤º£ ¸ÕÀú È®ÀÎ ÈÄ ÆÛÁñ Ç® ¼ö ÀÖµµ·Ï
+    if (visitedElevator_floor3 == 0) {      //ì—˜ë²  ë¨¼ì € í™•ì¸ í›„ í¼ì¦ í’€ ìˆ˜ ìˆë„ë¡
         clearScreen_floor3();
-        printf("\n  ¿¤·¹º£ÀÌÅÍ°¡ ÀÛµ¿ÇÏ´ÂÁö ¸ÕÀú È®ÀÎÇØº¸ÀÚ.\n");
+        printf("\n  ì—˜ë ˆë² ì´í„°ê°€ ì‘ë™í•˜ëŠ”ì§€ ë¨¼ì € í™•ì¸í•´ë³´ì.\n");
         pressEnter_floor3();
         return;
     }
 
-    int choice_floor3;      //¼±ÅÃÁö
-    int staying_floor3 = 1; //1,2,3 ¼±ÅÃ ÈÄ µ¹¾Æ°¡±â ´©¸£¸é 301È£·Î µ¹¾Æ°¡µµ·Ï
+    int choice_floor3;      //ì„ íƒì§€
+    int staying_floor3 = 1; //1,2,3 ì„ íƒ í›„ ëŒì•„ê°€ê¸° ëˆ„ë¥´ë©´ 301í˜¸ë¡œ ëŒì•„ê°€ë„ë¡
 
     while (staying_floor3) {
 
@@ -1156,30 +1155,30 @@ void puzzle_301_floor3() {
 
         switch (choice_floor3) {
 
-        case 1: //Ä¥ÆÇÀ» »ìÆìº»´Ù.
+        case 1: //ì¹ íŒì„ ì‚´í´ë³¸ë‹¤.
 
             clearScreen_floor3();
 
             printf("\n");
-            printf("  \033[90m+¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡+\033[0m\n");
-            printf("  \033[90m|\033[0m  \033[37m< 2Áø¼ö -> 10Áø¼ö º¯È¯ >               \033[90m|\033[0m\n");
+            printf("  \033[90m+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+\033[0m\n");
+            printf("  \033[90m|\033[0m  \033[37m< 2ì§„ìˆ˜ -> 10ì§„ìˆ˜ ë³€í™˜ >               \033[90m|\033[0m\n");
             printf("  \033[90m|\033[0m                                         \033[90m|\033[0m\n");
-            printf("  \033[90m|\033[0m  \033[37m  °¢ ÀÚ¸´¼ö¿¡ ¾Æ·¡ °ªÀ» °öÇÑ µÚ ÇÕ»ê   \033[90m|\033[0m\n");
+            printf("  \033[90m|\033[0m  \033[37m  ê° ìë¦¿ìˆ˜ì— ì•„ë˜ ê°’ì„ ê³±í•œ ë’¤ í•©ì‚°   \033[90m|\033[0m\n");
             printf("  \033[90m|\033[0m                                         \033[90m|\033[0m\n");
-            printf("  \033[90m|\033[0m  \033[37m  ÀÚ¸´¼ö:  8   4   2   1               \033[90m|\033[0m\n");
-            printf("  \033[90m|\033[0m  \033[37m  °ª   :   ?   ?   ?   ?               \033[90m|\033[0m\n");
+            printf("  \033[90m|\033[0m  \033[37m  ìë¦¿ìˆ˜:  8   4   2   1               \033[90m|\033[0m\n");
+            printf("  \033[90m|\033[0m  \033[37m  ê°’   :   ?   ?   ?   ?               \033[90m|\033[0m\n");
             printf("  \033[90m|\033[0m                                         \033[90m|\033[0m\n");
             printf("  \033[90m|\033[0m  \033[37m  = (?x8) + (?x4) + (?x2) + (?x1)      \033[90m|\033[0m\n");
             printf("  \033[90m|\033[0m                                         \033[90m|\033[0m\n");
-            printf("  \033[90m+¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡+\033[0m\n\n");
+            printf("  \033[90m+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+\033[0m\n\n");
 
-            printf("  ´©±º°¡ ¼ö¾÷ ³»¿ëÀ» ÆÇ¼­ÇØµĞ °Í °°´Ù.\n");
+            printf("  ëˆ„êµ°ê°€ ìˆ˜ì—… ë‚´ìš©ì„ íŒì„œí•´ë‘” ê²ƒ ê°™ë‹¤.\n");
 
             pressEnter_floor3();
 
             break;
 
-        case 2: //½Ã°è¸¦ »ìÆìº»´Ù.
+        case 2: //ì‹œê³„ë¥¼ ì‚´í´ë³¸ë‹¤.
 
             show_clock_ascii_floor3();
 
@@ -1187,7 +1186,7 @@ void puzzle_301_floor3() {
 
             break;
 
-        case 3: //Ã¥»óÀ» »ìÆìº»´Ù.
+        case 3: //ì±…ìƒì„ ì‚´í´ë³¸ë‹¤.
 
             clearScreen_floor3();
 
@@ -1199,13 +1198,13 @@ void puzzle_301_floor3() {
             printf("    \033[33m  |       |   \033[0m\n");
             printf("    \033[33m  |       |   \033[0m\n\n");
 
-            printf("  ÀÌ ÀÚ¸®¿¡ ¾É¾Ò´ø ÇĞ»ıÀÌ \033[90m'Áı¿¡ °¡°í ½Í´Ù...'\033[0m ¶ó°í ³«¼­ÇØ³ù´Ù. ³ªµµ... \n");
+            printf("  ì´ ìë¦¬ì— ì•‰ì•˜ë˜ í•™ìƒì´ \033[90m'ì§‘ì— ê°€ê³  ì‹¶ë‹¤...'\033[0m ë¼ê³  ë‚™ì„œí•´ë†¨ë‹¤. ë‚˜ë„... \n");
 
             pressEnter_floor3();
 
             break;
 
-        case 0: //µ¹¾Æ°£´Ù.(ÇÔ¼öÁ¾·á)
+        case 0: //ëŒì•„ê°„ë‹¤.(í•¨ìˆ˜ì¢…ë£Œ)
 
             staying_floor3 = 0;
 
@@ -1214,59 +1213,59 @@ void puzzle_301_floor3() {
     }
 }
 
-//3Ãş - Â¡°Ë´Ù¸® ÆÛÁñ
+//3ì¸µ - ì§•ê²€ë‹¤ë¦¬ í¼ì¦
 void puzzle_locker_floor3() {
 
-    if (visitedElevator_floor3 == 0) {  //¿¤º£ ¸ÕÀú È®ÀÎ ÈÄ ÆÛÁñ Ç® ¼ö ÀÖµµ·Ï
+    if (visitedElevator_floor3 == 0) {  //ì—˜ë²  ë¨¼ì € í™•ì¸ í›„ í¼ì¦ í’€ ìˆ˜ ìˆë„ë¡
         clearScreen_floor3();
-        printf("\n  ¿¤·¹º£ÀÌÅÍ°¡ ÀÛµ¿ÇÏ´ÂÁö ¸ÕÀú È®ÀÎÇØº¸ÀÚ.\n");
+        printf("\n  ì—˜ë ˆë² ì´í„°ê°€ ì‘ë™í•˜ëŠ”ì§€ ë¨¼ì € í™•ì¸í•´ë³´ì.\n");
         pressEnter_floor3();
         return;
     }
 
-    int choice_floor3 = -1; //¼±ÅÃÁö
+    int choice_floor3 = -1; //ì„ íƒì§€
 
     while (choice_floor3 != 0) {
         clearScreen_floor3();
 
-        printf("\n     \033[36m[ Â¡°Ë´Ù¸® ±¸¿ª ]\033[0m\n\n");
+        printf("\n     \033[36m[ ì§•ê²€ë‹¤ë¦¬ êµ¬ì—­ ]\033[0m\n\n");
 
-        printf("  ÀÚÇÏ°üÀ¸·Î ³Ñ¾î°¥ ¼ö ÀÖ´Â Â¡°Ë´Ù¸® ±¸¿ª.\n\n");
-        printf("  ÇÏÁö¸¸ À¯¸®¹®Àº Àá°ÜÀÖ´Ù. ±ÙÃ³¸¦ µÑ·¯º¼±î?\n\n");
-        printf("  ÇÑÂÊ º®¿¡ »ç¹°ÇÔµéÀÌ ÁÙÁö¾î ÀÖ´Ù.\n\n");
-        printf("  1. »ç¹°ÇÔÀ» »ìÆìº»´Ù\n\n");
-        printf("  2. »ç¹°ÇÔÀ» ¿­¾îº»´Ù\n\n");
-        printf("  0. µ¹¾Æ°£´Ù.\n\n");
+        printf("  ìí•˜ê´€ìœ¼ë¡œ ë„˜ì–´ê°ˆ ìˆ˜ ìˆëŠ” ì§•ê²€ë‹¤ë¦¬ êµ¬ì—­.\n\n");
+        printf("  í•˜ì§€ë§Œ ìœ ë¦¬ë¬¸ì€ ì ê²¨ìˆë‹¤. ê·¼ì²˜ë¥¼ ë‘˜ëŸ¬ë³¼ê¹Œ?\n\n");
+        printf("  í•œìª½ ë²½ì— ì‚¬ë¬¼í•¨ë“¤ì´ ì¤„ì§€ì–´ ìˆë‹¤.\n\n");
+        printf("  1. ì‚¬ë¬¼í•¨ì„ ì‚´í´ë³¸ë‹¤\n\n");
+        printf("  2. ì‚¬ë¬¼í•¨ì„ ì—´ì–´ë³¸ë‹¤\n\n");
+        printf("  0. ëŒì•„ê°„ë‹¤.\n\n");
 
-        printf("  ¼±ÅÃ >> ");
+        printf("  ì„ íƒ >> ");
         scanf("%d", &choice_floor3);
 
         while (getchar() != '\n');
 
         switch (choice_floor3) {
 
-        case 1: //»ç¹°ÇÔÀ» »ìÆìº»´Ù.
+        case 1: //ì‚¬ë¬¼í•¨ì„ ì‚´í´ë³¸ë‹¤.
 
             clearScreen_floor3();
 
             printf("\n");
-            printf("  \033[33m ¦£¦¡¦¡¦¡¦¡¦¡¦¨¦¡¦¡¦¡¦¡¦¡¦¨¦¡¦¡¦¡¦¡¦¡¦¨¦¡¦¡¦¡¦¡¦¡¦¤\033[0m\n");
-            printf("  \033[33m ¦¢  0  ¦¢  1  ¦¢  1  ¦¢  0  ¦¢\033[0m\n");
-            printf("  \033[33m ¦¦¦¡¦¡¦¡¦¡¦¡¦ª¦¡¦¡¦¡¦¡¦¡¦ª¦¡¦¡¦¡¦¡¦¡¦ª¦¡¦¡¦¡¦¡¦¡¦¥\033[0m\n\n");
+            printf("  \033[33m â”Œâ”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”\033[0m\n");
+            printf("  \033[33m â”‚  0  â”‚  1  â”‚  1  â”‚  0  â”‚\033[0m\n");
+            printf("  \033[33m â””â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”˜\033[0m\n\n");
 
-            printf("  »ç¹°ÇÔ À§¿¡ '0 1 1 0' ÀÌ¶ó´Â ¼ıÀÚ°¡ ½áÁ® ÀÖ´Ù.\n\n");
-
-            pressEnter_floor3();
-            break;
-
-        case 2: //»ç¹°ÇÔÀ» ¿­¾îº»´Ù.
-
-            printf("\n  »ç¹°ÇÔÀº ¸ğµÎ Àá°ÜÀÖ´Ù.\n");
+            printf("  ì‚¬ë¬¼í•¨ ìœ„ì— '0 1 1 0' ì´ë¼ëŠ” ìˆ«ìê°€ ì¨ì ¸ ìˆë‹¤.\n\n");
 
             pressEnter_floor3();
             break;
 
-        case 0: //µ¹¾Æ°£´Ù.(ÇÔ¼öÁ¾·á)
+        case 2: //ì‚¬ë¬¼í•¨ì„ ì—´ì–´ë³¸ë‹¤.
+
+            printf("\n  ì‚¬ë¬¼í•¨ì€ ëª¨ë‘ ì ê²¨ìˆë‹¤.\n");
+
+            pressEnter_floor3();
+            break;
+
+        case 0: //ëŒì•„ê°„ë‹¤.(í•¨ìˆ˜ì¢…ë£Œ)
 
             break;
 
@@ -1275,45 +1274,45 @@ void puzzle_locker_floor3() {
     }
 }
 
-//3Ãş - È­Àå½Ç ÆÛÁñ
+//3ì¸µ - í™”ì¥ì‹¤ í¼ì¦
 void puzzle_toilet_floor3() {
 
-    if (visitedElevator_floor3 == 0) {  //¿¤º£ ¸ÕÀú È®ÀÎ ÈÄ ÆÛÁñ Ç® ¼ö ÀÖµµ·Ï
+    if (visitedElevator_floor3 == 0) {  //ì—˜ë²  ë¨¼ì € í™•ì¸ í›„ í¼ì¦ í’€ ìˆ˜ ìˆë„ë¡
         clearScreen_floor3();
-        printf("\n  ¿¤·¹º£ÀÌÅÍ°¡ ÀÛµ¿ÇÏ´ÂÁö ¸ÕÀú È®ÀÎÇØº¸ÀÚ.\n");
+        printf("\n  ì—˜ë ˆë² ì´í„°ê°€ ì‘ë™í•˜ëŠ”ì§€ ë¨¼ì € í™•ì¸í•´ë³´ì.\n");
         pressEnter_floor3();
         return;
     }
 
-    int choice_floor3 = -1; //¼±ÅÃÁö
+    int choice_floor3 = -1; //ì„ íƒì§€
 
-    while (choice_floor3 != 0) { //0 == µ¹¾Æ°£´Ù.(ÇÔ¼öÁ¾·á)
+    while (choice_floor3 != 0) { //0 == ëŒì•„ê°„ë‹¤.(í•¨ìˆ˜ì¢…ë£Œ)
         clearScreen_floor3();
 
         printf("\n");
-        printf("  \033[36m[ 3Ãş È­Àå½Ç ]\033[0m\n\n");
-        printf("  È­Àå½Ç ¹® ¾Õ¿¡ ¶â¾îÁú °Í °°Àº Á¾ÀÌ ÇÑ ÀåÀÌ ºÙ¾î ÀÖ´Ù.\n\n");
+        printf("  \033[36m[ 3ì¸µ í™”ì¥ì‹¤ ]\033[0m\n\n");
+        printf("  í™”ì¥ì‹¤ ë¬¸ ì•ì— ëœ¯ì–´ì§ˆ ê²ƒ ê°™ì€ ì¢…ì´ í•œ ì¥ì´ ë¶™ì–´ ìˆë‹¤.\n\n");
 
-        printf("  1. ¶â¾îº»´Ù\n\n");
-        printf("  0. µ¹¾Æ°£´Ù\n\n");
+        printf("  1. ëœ¯ì–´ë³¸ë‹¤\n\n");
+        printf("  0. ëŒì•„ê°„ë‹¤\n\n");
 
-        printf("  ¼±ÅÃ >> ");
+        printf("  ì„ íƒ >> ");
         scanf("%d", &choice_floor3);
         while (getchar() != '\n');
 
-        if (choice_floor3 == 1) { //¶â¾îº»´Ù.
+        if (choice_floor3 == 1) { //ëœ¯ì–´ë³¸ë‹¤.
             clearScreen_floor3();
-            printf("  ¶â¾îº¸´Ï ¾ÈÂÊ¿¡ ±Û¾¾°¡ ÀûÇô ÀÖ´Ù.\n\n");
+            printf("  ëœ¯ì–´ë³´ë‹ˆ ì•ˆìª½ì— ê¸€ì”¨ê°€ ì í˜€ ìˆë‹¤.\n\n");
 
             printf("  \033[33m+-------------------------------------+\033[0m\n");
-            printf("  \033[33m|   ¡Ø °ÅÁş¸»ÀïÀÌ´Â ´Ü ÇÑ ¸í          |\033[0m\n");
+            printf("  \033[33m|   â€» ê±°ì§“ë§ìŸì´ëŠ” ë‹¨ í•œ ëª…          |\033[0m\n");
             printf("  \033[33m|                                     |\033[0m\n");
-            printf("  \033[33m|  A: \"B´Â Áø½ÇÀ» ¸»ÇÏ°í ÀÖ¾î\"        |\033[0m\n");
-            printf("  \033[33m|  B: \"³ª´Â °ÅÁş¸»ÀïÀÌ°¡ ¾Æ´Ï¾ß\"      |\033[0m\n");
-            printf("  \033[33m|  C: \"A´Â °ÅÁş¸»ÀïÀÌ¾ß\"              |\033[0m\n");
-            printf("  \033[33m|  D: \"C´Â Áø½ÇÀ» ¸»ÇÏ°í ÀÖ¾î\"        |\033[0m\n");
+            printf("  \033[33m|  A: \"BëŠ” ì§„ì‹¤ì„ ë§í•˜ê³  ìˆì–´\"        |\033[0m\n");
+            printf("  \033[33m|  B: \"ë‚˜ëŠ” ê±°ì§“ë§ìŸì´ê°€ ì•„ë‹ˆì•¼\"      |\033[0m\n");
+            printf("  \033[33m|  C: \"AëŠ” ê±°ì§“ë§ìŸì´ì•¼\"              |\033[0m\n");
+            printf("  \033[33m|  D: \"CëŠ” ì§„ì‹¤ì„ ë§í•˜ê³  ìˆì–´\"        |\033[0m\n");
             printf("  \033[33m|                                     |\033[0m\n");
-            printf("  \033[33m|  °ÅÁş¸»ÀïÀÌ´Â ´©±¸ÀÎ°¡?             |\033[0m\n");
+            printf("  \033[33m|  ê±°ì§“ë§ìŸì´ëŠ” ëˆ„êµ¬ì¸ê°€?             |\033[0m\n");
             printf("  \033[33m+-------------------------------------+\033[0m\n\n");
 
             pressEnter_floor3();
@@ -1322,102 +1321,102 @@ void puzzle_toilet_floor3() {
     }
 }
 
-//3Ãş - ±³¼ö´Ô¿¬±¸½Ç ÆÛÁñ
+//3ì¸µ - êµìˆ˜ë‹˜ì—°êµ¬ì‹¤ í¼ì¦
 void puzzle_lab_floor3() {
 
-    if (visitedElevator_floor3 == 0) {  //¿¤º£ ¸ÕÀú È®ÀÎ ÈÄ ÆÛÁñ Ç® ¼ö ÀÖµµ·Ï
+    if (visitedElevator_floor3 == 0) {  //ì—˜ë²  ë¨¼ì € í™•ì¸ í›„ í¼ì¦ í’€ ìˆ˜ ìˆë„ë¡
         clearScreen_floor3();
-        printf("\n  ¿¤·¹º£ÀÌÅÍ°¡ ÀÛµ¿ÇÏ´ÂÁö ¸ÕÀú È®ÀÎÇØº¸ÀÚ.\n");
+        printf("\n  ì—˜ë ˆë² ì´í„°ê°€ ì‘ë™í•˜ëŠ”ì§€ ë¨¼ì € í™•ì¸í•´ë³´ì.\n");
         pressEnter_floor3();
         return;
     }
 
-    int choice_floor3 = -1; //¼±ÅÃÁö
+    int choice_floor3 = -1; //ì„ íƒì§€
 
-    while (choice_floor3 != 0) { //0 == µ¹¾Æ°£´Ù.(ÇÔ¼öÁ¾·á)
+    while (choice_floor3 != 0) { //0 == ëŒì•„ê°„ë‹¤.(í•¨ìˆ˜ì¢…ë£Œ)
 
         clearScreen_floor3();
 
-        printf("\n  \033[36m[ ±³¼ö´Ô ¿¬±¸½Ç ]\033[0m\n\n");
+        printf("\n  \033[36m[ êµìˆ˜ë‹˜ ì—°êµ¬ì‹¤ ]\033[0m\n\n");
         printf("\033[33m _________________\033[0m                                        \n");
         printf("\033[33m|  ______________ |\033[0m                                        \n");
         printf("\033[33m| |_\\_\\_\\_\\_\\_\\_| |\033[0m                                        \n");
         printf("\033[33m| |=|=|=|=|=|=|=| |\033[0m                                        \n");
         printf("\033[33m| | | | | | | | | |\033[0m                                        \n");
         printf("\033[33m| |_|_|_|_|_|_|_| |\033[0m                                        \n");
-        printf("\033[33m|  _______________|\033[0m   \033[36m.¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡.\033[0m                  \n");
+        printf("\033[33m|  _______________|\033[0m   \033[36m.â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€.\033[0m                  \n");
         printf("\033[33m| |_\\_\\_\\_\\_\\_\\_| |\033[0m   \033[36m|  ___________  |\033[0m                  \n");
         printf("\033[33m| |=|=|=|=|||=|=| |\033[0m   \033[36m| |           | |\033[0m                  \n");
         printf("\033[33m| | | | | ||| | | |\033[0m   \033[36m| |           | |\033[0m                  \n");
         printf("\033[33m| |_|_|_|_|||_|_| |\033[0m   \033[36m| |           | |\033[0m              \n");
         printf("\033[33m|  ______________ |\033[0m   \033[36m| |___________| |\033[0m  \033[33m  (   )\033[0m          \n");
-        printf("\033[33m| |_\\_\\_\\_\\_\\_\\_| |\033[0m   \033[36m`¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡'\033[0m    \033[33m|   |\033[0m          \n");
-        printf("\033[33m| |=|=|=|=|=|=|=| |\033[0m        \033[36m||||||\033[0m          \033[33m`¦¡¦¡¦¡'\033[0m          \n");
-        printf("\033[33m| | | | | | | | | |\033[0m   \033[36m¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\033[0m\n");
+        printf("\033[33m| |_\\_\\_\\_\\_\\_\\_| |\033[0m   \033[36m`â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€'\033[0m    \033[33m|   |\033[0m          \n");
+        printf("\033[33m| |=|=|=|=|=|=|=| |\033[0m        \033[36m||||||\033[0m          \033[33m`â”€â”€â”€'\033[0m          \n");
+        printf("\033[33m| | | | | | | | | |\033[0m   \033[36mâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\033[0m\n");
         printf("\033[33m| |_|_|_|_|_|_|_| |\033[0m   \033[36m  [   ] [   ]  ????????????\033[0m\n");
-        printf("\033[33m|_________________|\033[0m  \033[36m¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\033[0m\n");
+        printf("\033[33m|_________________|\033[0m  \033[36mâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\033[0m\n");
         printf("                            \033[36m|          |\033[0m                    \n");
-        printf(" \033[90m¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\033[0m\n\n");
-        printf("  ¿¬±¸½Ç ¹®ÀÌ Á¶±İ ¿­·ÁÀÖ´Ù. Á¶½É½º·´°Ô µé¾î°£´Ù.\n\n");
-        printf("  Ã¥ÀÌ ÀÜ¶à ²ÈÇôÀÖ´Â Ã¥Àå, ±³¼ö´ÔÀÇ ÄÄÇ»ÅÍ Ã¥»ó, ¾²·¹±âÅëÀÌ º¸ÀÎ´Ù.\n\n");
+        printf(" \033[90mâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\033[0m\n\n");
+        printf("  ì—°êµ¬ì‹¤ ë¬¸ì´ ì¡°ê¸ˆ ì—´ë ¤ìˆë‹¤. ì¡°ì‹¬ìŠ¤ëŸ½ê²Œ ë“¤ì–´ê°„ë‹¤.\n\n");
+        printf("  ì±…ì´ ì”ëœ© ê½‚í˜€ìˆëŠ” ì±…ì¥, êµìˆ˜ë‹˜ì˜ ì»´í“¨í„° ì±…ìƒ, ì“°ë ˆê¸°í†µì´ ë³´ì¸ë‹¤.\n\n");
 
-        printf("  1. Ã¥»óÀ» »ìÆìº»´Ù\n\n");
-        printf("  2. ¾²·¹±âÅëÀ» »ìÆìº»´Ù\n\n");
-        printf("  3. Ã¥ÀåÀ» »ìÆìº»´Ù\n\n");
-        printf("  0. µ¹¾Æ°£´Ù\n\n");
+        printf("  1. ì±…ìƒì„ ì‚´í´ë³¸ë‹¤\n\n");
+        printf("  2. ì“°ë ˆê¸°í†µì„ ì‚´í´ë³¸ë‹¤\n\n");
+        printf("  3. ì±…ì¥ì„ ì‚´í´ë³¸ë‹¤\n\n");
+        printf("  0. ëŒì•„ê°„ë‹¤\n\n");
 
-        printf("  ¼±ÅÃ >> ");
+        printf("  ì„ íƒ >> ");
         scanf("%d", &choice_floor3);
         while (getchar() != '\n');
 
-        if (choice_floor3 == 1) {   //Ã¥»óÀ» »ìÆìº»´Ù.
-            int Choice2_floor3 = -1;  //µÎ¹øÂ° ¼±ÅÃÁö
-            while (Choice2_floor3 != 0) { //0 == µ¹¾Æ°£´Ù.(ÇÔ¼öÁ¾·á)
+        if (choice_floor3 == 1) {   //ì±…ìƒì„ ì‚´í´ë³¸ë‹¤.
+            int Choice2_floor3 = -1;  //ë‘ë²ˆì§¸ ì„ íƒì§€
+            while (Choice2_floor3 != 0) { //0 == ëŒì•„ê°„ë‹¤.(í•¨ìˆ˜ì¢…ë£Œ)
                 clearScreen_floor3();
-                printf("  Ã¥»ó ¾Õ¿¡ ¼¹´Ù.\n\n");
-                printf("  1. ÄÄÇ»ÅÍ¸¦ »ìÆìº»´Ù\n\n");
-                printf("  2. Ã¥»óÀ» »ìÆìº»´Ù\n\n");
-                printf("  0. µ¹¾Æ°£´Ù\n\n");
-                printf("  ¼±ÅÃ >> ");
+                printf("  ì±…ìƒ ì•ì— ì„°ë‹¤.\n\n");
+                printf("  1. ì»´í“¨í„°ë¥¼ ì‚´í´ë³¸ë‹¤\n\n");
+                printf("  2. ì±…ìƒì„ ì‚´í´ë³¸ë‹¤\n\n");
+                printf("  0. ëŒì•„ê°„ë‹¤\n\n");
+                printf("  ì„ íƒ >> ");
                 scanf("%d", &Choice2_floor3);
                 while (getchar() != '\n');
 
-                if (Choice2_floor3 == 1) { //ÄÄÇ»ÅÍ¸¦ »ìÆìº»´Ù.
+                if (Choice2_floor3 == 1) { //ì»´í“¨í„°ë¥¼ ì‚´í´ë³¸ë‹¤.
                     printf("\n");
-                    printf("         \033[36m.¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡.\033[0m\n");
-                    printf("         \033[36m|  ¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤ |\033[0m\n");
-                    printf("         \033[36m|  ¦¢                         ¦¢ |\033[0m\n");
-                    printf("         \033[36m|  ¦¢                         ¦¢ |\033[0m\n");
-                    printf("         \033[36m|  ¦¢                         ¦¢ |\033[0m\n");
-                    printf("         \033[36m|  ¦¢                         ¦¢ |\033[0m\n");
-                    printf("         \033[36m|  ¦¢                         ¦¢ |\033[0m\n");
-                    printf("         \033[36m|  ¦¢                         ¦¢ |\033[0m\n");
-                    printf("         \033[36m|  ¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥ |\033[0m\n");
-                    printf("         \033[36m`¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡'\033[0m\n");
+                    printf("         \033[36m.â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€.\033[0m\n");
+                    printf("         \033[36m|  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” |\033[0m\n");
+                    printf("         \033[36m|  â”‚                         â”‚ |\033[0m\n");
+                    printf("         \033[36m|  â”‚                         â”‚ |\033[0m\n");
+                    printf("         \033[36m|  â”‚                         â”‚ |\033[0m\n");
+                    printf("         \033[36m|  â”‚                         â”‚ |\033[0m\n");
+                    printf("         \033[36m|  â”‚                         â”‚ |\033[0m\n");
+                    printf("         \033[36m|  â”‚                         â”‚ |\033[0m\n");
+                    printf("         \033[36m|  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ |\033[0m\n");
+                    printf("         \033[36m`â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€'\033[0m\n");
                     printf("                    \033[36m||||||||||||\033[0m\n");
-                    printf("         \033[36m¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\033[0m\n\n");
-                    printf("  ÄÄÇ»ÅÍ´Â ÄÑÁöÁö ¾Ê´Â´Ù...\n");
+                    printf("         \033[36mâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\033[0m\n\n");
+                    printf("  ì»´í“¨í„°ëŠ” ì¼œì§€ì§€ ì•ŠëŠ”ë‹¤...\n");
                     pressEnter_floor3();
                 }
-                else if (Choice2_floor3 == 2) { //Ã¥»óÀ» »ìÆìº»´Ù.
+                else if (Choice2_floor3 == 2) { //ì±…ìƒì„ ì‚´í´ë³¸ë‹¤.
 
                     printf("\n");
-                    printf("  Ã¥»ó À§¿¡´Â ³í¹® ´õ¹Ì¿Í ºó Ä¿ÇÇÀÜ»ÓÀÌ´Ù.\n");
+                    printf("  ì±…ìƒ ìœ„ì—ëŠ” ë…¼ë¬¸ ë”ë¯¸ì™€ ë¹ˆ ì»¤í”¼ì”ë¿ì´ë‹¤.\n");
                     pressEnter_floor3();
                 }
             }
         }
 
-        if (choice_floor3 == 2) {   //¾²·¹±âÅëÀ» »ìÆìº»´Ù.
+        if (choice_floor3 == 2) {   //ì“°ë ˆê¸°í†µì„ ì‚´í´ë³¸ë‹¤.
 
             printf("\n");
-            printf("  ¾²·¹±âÅëÀ» µÚÁ®ºÃÁö¸¸... À¸À½, °ÇÁú °Ç ¾ø´Â °Í °°´Ù.\n");
+            printf("  ì“°ë ˆê¸°í†µì„ ë’¤ì ¸ë´¤ì§€ë§Œ... ìœ¼ìŒ, ê±´ì§ˆ ê±´ ì—†ëŠ” ê²ƒ ê°™ë‹¤.\n");
             pressEnter_floor3();
         }
 
-        if (choice_floor3 == 3) {   //Ã¥ÀåÀ» »ìÆìº»´Ù.
+        if (choice_floor3 == 3) {   //ì±…ì¥ì„ ì‚´í´ë³¸ë‹¤.
             int Choice2_floor3 = -1;
-            while (Choice2_floor3 != 0) { //0 == µ¹¾Æ°£´Ù.(ÇÔ¼öÁ¾·á)
+            while (Choice2_floor3 != 0) { //0 == ëŒì•„ê°„ë‹¤.(í•¨ìˆ˜ì¢…ë£Œ)
                 clearScreen_floor3();
                 printf("  \033[33m _____________________\033[0m\n");
                 printf("  \033[33m |                     \\ \033[0m\n");
@@ -1429,19 +1428,19 @@ void puzzle_lab_floor3() {
                 printf("  \033[33m | | ||| ||| || |||  ||| |\033[0m\n");
                 printf("  \033[33m | |_____________________|\033[0m\n\n");
 
-                printf("  Ã¥ÀåÀ» »ìÆìº¸´Ï, ÇÑ ±Ç¸¸ \033[31m°Å²Ù·Î\033[0m µÇ¾îÀÖ´Ù.\n\n");
-                printf("  1. µÚÁıÈù Ã¥À» ²¨³» »ìÆìº»´Ù\n\n");
-                printf("  0. µ¹¾Æ°£´Ù\n\n");
-                printf("  ¼±ÅÃ >> ");
+                printf("  ì±…ì¥ì„ ì‚´í´ë³´ë‹ˆ, í•œ ê¶Œë§Œ \033[31mê±°ê¾¸ë¡œ\033[0m ë˜ì–´ìˆë‹¤.\n\n");
+                printf("  1. ë’¤ì§‘íŒ ì±…ì„ êº¼ë‚´ ì‚´í´ë³¸ë‹¤\n\n");
+                printf("  0. ëŒì•„ê°„ë‹¤\n\n");
+                printf("  ì„ íƒ >> ");
                 scanf("%d", &Choice2_floor3);
                 while (getchar() != '\n');
 
-                if (Choice2_floor3 == 1) { //µÚÁıÈù Ã¥À» ²¨³» »ìÆìº»´Ù.
+                if (Choice2_floor3 == 1) { //ë’¤ì§‘íŒ ì±…ì„ êº¼ë‚´ ì‚´í´ë³¸ë‹¤.
                     clearScreen_floor3();
                     printf("\n");
-                    printf("  Ã¥À» ²¨³» µÚÁı¾îº¸´Ï µî¿¡ ÀÌ·¸°Ô ÀûÇô ÀÖ´Ù:\n\n");
+                    printf("  ì±…ì„ êº¼ë‚´ ë’¤ì§‘ì–´ë³´ë‹ˆ ë“±ì— ì´ë ‡ê²Œ ì í˜€ ìˆë‹¤:\n\n");
                     printf("  \033[33m  Escape Series ? Part. T\033[0m\n\n");
-                    printf("  ½Ã¸®Áî ¹øÈ£... \033[33mT\033[0m.\n");
+                    printf("  ì‹œë¦¬ì¦ˆ ë²ˆí˜¸... \033[33mT\033[0m.\n");
                     pressEnter_floor3();
                 }
             }
@@ -1449,37 +1448,37 @@ void puzzle_lab_floor3() {
     }
 }
 
-//3Ãş - ¿¤º£ ÄÚµåÀÔ·Â Àå
+//3ì¸µ - ì—˜ë²  ì½”ë“œì…ë ¥ ì¥
 int elevator_floor3() {
 
 
-    visitedElevator_floor3 = 1; //¿¤º£ ¹æ¹®ÇÔ
+    visitedElevator_floor3 = 1; //ì—˜ë²  ë°©ë¬¸í•¨
 
-    int choice_floor3; //¼±ÅÃÁö
-    char input_floor3[10]; //ÄÚµåÀÔ·Â
+    int choice_floor3; //ì„ íƒì§€
+    char input_floor3[10]; //ì½”ë“œì…ë ¥
 
-    while (1) { //ÄÚµå ÀÔ·Â ½ÇÆĞÇØµµ ¹İº¹ÇØ¼­ ¶ç¿ò
+    while (1) { //ì½”ë“œ ì…ë ¥ ì‹¤íŒ¨í•´ë„ ë°˜ë³µí•´ì„œ ë„ì›€
 
         clearScreen_floor3();
-        printf("\n     \033[36m[ ¿¤·¹º£ÀÌÅÍ ]\033[0m\n\n");
-        printf("  ¿¤·¹º£ÀÌÅÍ ÆĞ³Î¿¡ »¡°£ °æ°í¹®ÀÌ ¶° ÀÖ´Ù.\n\n");
-        printf("  \033[31m  !! °ü¸®ÀÚ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä: [ _ ] [ _ ] [ _ ] [ _ ]  !!\033[0m\n\n");
-        printf("  \033[90m  ÈùÆ® : ¼ø¼­´Â 301È£ - Â¡°Ë´Ù¸® - ±³¼ö´Ô ¿¬±¸½Ç - È­Àå½Ç\033[0m\n\n");
+        printf("\n     \033[36m[ ì—˜ë ˆë² ì´í„° ]\033[0m\n\n");
+        printf("  ì—˜ë ˆë² ì´í„° íŒ¨ë„ì— ë¹¨ê°„ ê²½ê³ ë¬¸ì´ ë–  ìˆë‹¤.\n\n");
+        printf("  \033[31m  !! ê´€ë¦¬ì ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”: [ _ ] [ _ ] [ _ ] [ _ ]  !!\033[0m\n\n");
+        printf("  \033[90m  íŒíŠ¸ : ìˆœì„œëŠ” 301í˜¸ - ì§•ê²€ë‹¤ë¦¬ - êµìˆ˜ë‹˜ ì—°êµ¬ì‹¤ - í™”ì¥ì‹¤\033[0m\n\n");
         printf("        \033[33m+---------------------+\033[0m\n");
         printf("        \033[33m|  ELEVATOR  SYSTEM   |\033[0m\n");
         printf("        \033[33m|---------------------|\033[0m\n");
-        printf("        \033[33m|   °ü¸®ÀÚ ÄÚµå ÀÔ·Â  |\033[0m\n");
+        printf("        \033[33m|   ê´€ë¦¬ì ì½”ë“œ ì…ë ¥  |\033[0m\n");
         printf("        \033[33m|                     |\033[0m\n");
         printf("        \033[33m|  [  ] [  ] [  ] [  ]|\033[0m\n");
         printf("        \033[33m|                     |\033[0m\n");
         printf("        \033[33m+---------------------+\033[0m\n\n");
-        printf("  1. °ü¸®ÀÚ ÄÚµå¸¦ ÀÔ·ÂÇÑ´Ù.\n\n");
-        printf("  0. µ¹¾Æ°£´Ù.\n\n");
-        printf("  ¼±ÅÃ >> ");
+        printf("  1. ê´€ë¦¬ì ì½”ë“œë¥¼ ì…ë ¥í•œë‹¤.\n\n");
+        printf("  0. ëŒì•„ê°„ë‹¤.\n\n");
+        printf("  ì„ íƒ >> ");
         scanf("%d", &choice_floor3);
         while (getchar() != '\n');
 
-        if (choice_floor3 == 0) { //µÚ·Î°¡±â(ÇÔ¼öÁ¾·á)
+        if (choice_floor3 == 0) { //ë’¤ë¡œê°€ê¸°(í•¨ìˆ˜ì¢…ë£Œ)
             return 0;
         }
 
@@ -1488,17 +1487,17 @@ int elevator_floor3() {
         }
 
         printf("\n");
-        printf("  ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ");
+        printf("  ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ");
         scanf("%9s", input_floor3);
         while (getchar() != '\n');
 
-        char answer_floor3[] = "96CT";  //Á¤´ä ÄÚµå
-        int correct_floor3 = 1; //Á¤´äÀÌ ¸Â´ÂÁö ¿©ºÎ
+        char answer_floor3[] = "96CT";  //ì •ë‹µ ì½”ë“œ
+        int correct_floor3 = 1; //ì •ë‹µì´ ë§ëŠ”ì§€ ì—¬ë¶€
 
-        if (strlen(input_floor3) != 4) { //ÄÚµå°¡ 4±ÛÀÚ°¡ ¾Æ´Ï¸é ¿À´äÃ³¸®
+        if (strlen(input_floor3) != 4) { //ì½”ë“œê°€ 4ê¸€ìê°€ ì•„ë‹ˆë©´ ì˜¤ë‹µì²˜ë¦¬
             correct_floor3 = 0;
         }
-        else {  //¼Ò¹®ÀÚ¸¦ ´ë¹®ÀÚ·Î º¯È¯,ÄÚµå°¡ ÇÏ³ª¶óµµ ´Ù¸£¸é ¿À´äÃ³¸®
+        else {  //ì†Œë¬¸ìë¥¼ ëŒ€ë¬¸ìë¡œ ë³€í™˜,ì½”ë“œê°€ í•˜ë‚˜ë¼ë„ ë‹¤ë¥´ë©´ ì˜¤ë‹µì²˜ë¦¬
             for (int i_floor3 = 0; i_floor3 < 4; i_floor3++) {
                 char a_floor3 = input_floor3[i_floor3];
                 if (a_floor3 >= 'a' && a_floor3 <= 'z')
@@ -1510,40 +1509,40 @@ int elevator_floor3() {
             }
         }
 
-        if (correct_floor3) { //Á¤´äÀÏ ¶§ ¼º°ø ¸Ş½ÃÁö Ãâ·Â
+        if (correct_floor3) { //ì •ë‹µì¼ ë•Œ ì„±ê³µ ë©”ì‹œì§€ ì¶œë ¥
             floor_change = 2;
             clearScreen_floor3();
             printf("\033[32m\n\n");
             printf("     +-----------------------------------------+\n");
             printf("     |                                         |\n");
-            printf("     |       ÄÚµå [ 9 - 6 - C - T ] ÀÏÄ¡!      |\n");
+            printf("     |       ì½”ë“œ [ 9 - 6 - C - T ] ì¼ì¹˜!      |\n");
             printf("     |                                         |\n");
-            printf("     |  \033[0m    ¿¤·¹º£ÀÌÅÍ°¡ ÀÛµ¿À» ½ÃÀÛÇÑ´Ù...   \033[32m |\n");
+            printf("     |  \033[0m    ì—˜ë ˆë² ì´í„°ê°€ ì‘ë™ì„ ì‹œì‘í•œë‹¤...   \033[32m |\n");
             printf("     |                                         |\n");
-            printf("     |  \033[0m    2Ãş ¿ÜÀÇ ¹öÆ°Àº ´­¸®Áö ¾Ê´Â´Ù.   \033[32m  |\n");
+            printf("     |  \033[0m    2ì¸µ ì™¸ì˜ ë²„íŠ¼ì€ ëˆŒë¦¬ì§€ ì•ŠëŠ”ë‹¤.   \033[32m  |\n");
             printf("     |                                         |\n");
             printf("     |                                         |\n");
-            printf("     |         v  2ÃşÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù  v        |\n");
+            printf("     |         v  2ì¸µìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤  v        |\n");
             printf("     +-----------------------------------------+\n");
             printf("\033[0m\n\n");
 
             fflush(stdout);
-            sleep(5); //5ÃÊ ´ë±â
+            sleep(5); //5ì´ˆ ëŒ€ê¸°
 
-            return 1; //ÇÔ¼ö ¹İÈ¯
+            return 1; //í•¨ìˆ˜ ë°˜í™˜
         }
-        else { //¿À´äÀÏ ¶§ ¿À´ä ¸Ş½ÃÁö Ãâ·Â
-            printf("\n  \033[31mÆ²¸° °Í °°´Ù.. \033[0m ¿¤·¹º£ÀÌÅÍ°¡ ¹İÀÀÇÏÁö ¾Ê´Â´Ù.\n");
+        else { //ì˜¤ë‹µì¼ ë•Œ ì˜¤ë‹µ ë©”ì‹œì§€ ì¶œë ¥
+            printf("\n  \033[31mí‹€ë¦° ê²ƒ ê°™ë‹¤.. \033[0m ì—˜ë ˆë² ì´í„°ê°€ ë°˜ì‘í•˜ì§€ ì•ŠëŠ”ë‹¤.\n");
             pressEnter_floor3();
         }
     }
 }
 
-//3Ãş - ¸Ê Å©±â Á¤ÀÇ
+//3ì¸µ - ë§µ í¬ê¸° ì •ì˜
 #define ROWS 19
 #define COLS 21
 
-//3Ãş - ¸Ê Ãâ·Â ÇÔ¼ö
+//3ì¸µ - ë§µ ì¶œë ¥ í•¨ìˆ˜
 int map_floor3[19][21] = {
    { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,1,1,1,1 },
    { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1 },
@@ -1566,32 +1565,32 @@ int map_floor3[19][21] = {
    { 0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
 };
 
-//3Ãş - ÇÃ·¹ÀÌ¾î À§Ä¡¸¦ ¹Ş¾Æ¼­ ¸ÊÀ» Ãâ·Â
+//3ì¸µ - í”Œë ˆì´ì–´ ìœ„ì¹˜ë¥¼ ë°›ì•„ì„œ ë§µì„ ì¶œë ¥
 void printmap_floor3(int playerRow_floor3, int playerCol_floor3) {
 
     const char* sym_floor3[] = {
         "  ",
-        "\033[48;2;169;169;169m  \033[0m",   // È¸»ö º®
-        "\033[31m¹®\033[0m",                 // Ã¹¹øÂ° ¹® - »¡°­
-        "\033[32m¹®\033[0m",                 // µÎ¹øÂ° ¹® - ÃÊ·Ï
-        "\033[92m°è\033[0m",                 // °è´Ü - ¹àÀº ÃÊ·Ï
-        "\033[92m´Ü\033[0m",
-        "\033[91m¿¤\033[0m",                 // ¿¤º£ - ¹àÀº »¡°­
-        "\033[91mº£\033[0m",
-        "\033[38;5;208mÂ¡\033[0m",           // Â¡°Ë´Ù¸® - ÁÖÈ²
-        "\033[38;5;208m°Ë\033[0m",
-        "\033[38;5;208m´Ù\033[0m",
-        "\033[38;5;208m¸®\033[0m",
-        "\033[33mÈ­\033[0m",                 // È­Àå½Ç - ³ë¶û
-        "\033[33mÀå\033[0m",
-        "\033[33m½Ç\033[0m",
+        "\033[48;2;169;169;169m  \033[0m",   // íšŒìƒ‰ ë²½
+        "\033[31më¬¸\033[0m",                 // ì²«ë²ˆì§¸ ë¬¸ - ë¹¨ê°•
+        "\033[32më¬¸\033[0m",                 // ë‘ë²ˆì§¸ ë¬¸ - ì´ˆë¡
+        "\033[92mê³„\033[0m",                 // ê³„ë‹¨ - ë°ì€ ì´ˆë¡
+        "\033[92më‹¨\033[0m",
+        "\033[91mì—˜\033[0m",                 // ì—˜ë²  - ë°ì€ ë¹¨ê°•
+        "\033[91më² \033[0m",
+        "\033[38;5;208mì§•\033[0m",           // ì§•ê²€ë‹¤ë¦¬ - ì£¼í™©
+        "\033[38;5;208mê²€\033[0m",
+        "\033[38;5;208më‹¤\033[0m",
+        "\033[38;5;208më¦¬\033[0m",
+        "\033[33mí™”\033[0m",                 // í™”ì¥ì‹¤ - ë…¸ë‘
+        "\033[33mì¥\033[0m",
+        "\033[33mì‹¤\033[0m",
 
     };
 
-    printf("\033[2J\033[1;1f"); //Ä¿¼­ ÀÌµ¿
+    printf("\033[2J\033[1;1f"); //ì»¤ì„œ ì´ë™
 
     printf("\n");
-    printf("  \033[33m--- 3Ãş º¹µµ ---\033[0m  WASD: ÀÌµ¿ | E: »óÈ£ÀÛ¿ë\n\n"); //Á¶ÀÛ¹ı ¾È³»
+    printf("  \033[33m--- 3ì¸µ ë³µë„ ---\033[0m  WASD: ì´ë™ | E: ìƒí˜¸ì‘ìš©\n\n"); //ì¡°ì‘ë²• ì•ˆë‚´
 
     for (int r_floor3 = 0; r_floor3 < ROWS; r_floor3++) {
 
@@ -1600,9 +1599,9 @@ void printmap_floor3(int playerRow_floor3, int playerCol_floor3) {
         for (int c_floor3 = 0; c_floor3 < COLS; c_floor3++) {
 
             if (r_floor3 == playerRow_floor3 && c_floor3 == playerCol_floor3)
-                printf("¿Ê"); //ÇÃ·¹ÀÌ¾î À§Ä¡¿¡ Ãâ·Â
+                printf("ì˜·"); //í”Œë ˆì´ì–´ ìœ„ì¹˜ì— ì¶œë ¥
             else
-                printf("%s", sym_floor3[map_floor3[r_floor3][c_floor3]]); //¾Æ´Ï¸é °ª¿¡ ¸Â´Â ½Éº¼ Ãâ·Â
+                printf("%s", sym_floor3[map_floor3[r_floor3][c_floor3]]); //ì•„ë‹ˆë©´ ê°’ì— ë§ëŠ” ì‹¬ë³¼ ì¶œë ¥
 
         }
 
@@ -1612,32 +1611,32 @@ void printmap_floor3(int playerRow_floor3, int playerCol_floor3) {
     printf("\n");
 }
 
-//3Ãş - ½ÃÀÛ
+//3ì¸µ - ì‹œì‘
 void floor3() {
     clearScreen_floor3();
     printf("\033[33m\n\n");
     printf("     +====================================+\n");
     printf("     |           3 F L O O R              |\n");
-    printf("     |      »ó¸í´ëÇĞ±³ Á¦1°øÇĞ°ü 3Ãş      |\n");
+    printf("     |      ìƒëª…ëŒ€í•™êµ ì œ1ê³µí•™ê´€ 3ì¸µ      |\n");
     printf("     +====================================+\n");
     printf("\033[0m\n\n");
-    printf("           4Ãş¿¡¼­ °è´ÜÀ» ³»·Á¿Ô´Ù.\n\n");
-    printf("      ÇÏÁö¸¸ ¾Æ·¡·Î °¡´Â °è´ÜÀÌ \033[31m¸·Çô ÀÖ´Ù!\033[0m\n\n");
-    printf("           ¿¤·¹º£ÀÌÅÍ¸¦ È®ÀÎÇØº¼±î?\n\n");
+    printf("           4ì¸µì—ì„œ ê³„ë‹¨ì„ ë‚´ë ¤ì™”ë‹¤.\n\n");
+    printf("      í•˜ì§€ë§Œ ì•„ë˜ë¡œ ê°€ëŠ” ê³„ë‹¨ì´ \033[31më§‰í˜€ ìˆë‹¤!\033[0m\n\n");
+    printf("           ì—˜ë ˆë² ì´í„°ë¥¼ í™•ì¸í•´ë³¼ê¹Œ?\n\n");
     pressEnter_floor3();
     int row = 5;
-    int col = 4;    //ÇÃ·¹ÀÌ¾î ½ÃÀÛ ÁÂÇ¥
-    char dir; //ÀÔ·Â ¹æÇâ
-    int running_floor3 = 1; //°ÔÀÓ ½ÇÇà »óÅÂ
+    int col = 4;    //í”Œë ˆì´ì–´ ì‹œì‘ ì¢Œí‘œ
+    char dir; //ì…ë ¥ ë°©í–¥
+    int running_floor3 = 1; //ê²Œì„ ì‹¤í–‰ ìƒíƒœ
 
     while (running_floor3) {
         printmap_floor3(row, col);
-        printf("  ¹æÇâ(WASD) ¶Ç´Â E(»óÈ£ÀÛ¿ë) >> ");
+        printf("  ë°©í–¥(WASD) ë˜ëŠ” E(ìƒí˜¸ì‘ìš©) >> ");
         scanf(" %c", &dir);
 
         while (getchar() != '\n');
         int nr_floor3 = row;
-        int nc_floor3 = col;    //ÀÔ·Â¹æÇâ¿¡ µû¶ó ÁÂÇ¥ °è»ê -> ÀÌµ¿
+        int nc_floor3 = col;    //ì…ë ¥ë°©í–¥ì— ë”°ë¼ ì¢Œí‘œ ê³„ì‚° -> ì´ë™
 
         if (dir == 'w' || dir == 'W')
             nr_floor3--;
@@ -1645,11 +1644,11 @@ void floor3() {
             nr_floor3++;
         else if (dir == 'a' || dir == 'A')
             nc_floor3--;
-        else if (dir == 'd' || dir == 'D') //wasd ÀÔ·Â½Ã ÀÌµ¿
+        else if (dir == 'd' || dir == 'D') //wasd ì…ë ¥ì‹œ ì´ë™
             nc_floor3++;
-        else if (dir == 'e' || dir == 'E') { //e ÀÔ·Â½Ã »óÈ£ÀÛ¿ë
-            int cell_floor3 = map_floor3[row][col]; //ÇöÀç À§Ä¡
-            int adj_floor3[4][2] = { //¶Ç´Â ÀÎÁ¢ÇÑ 4Ä­ È®ÀÎ.
+        else if (dir == 'e' || dir == 'E') { //e ì…ë ¥ì‹œ ìƒí˜¸ì‘ìš©
+            int cell_floor3 = map_floor3[row][col]; //í˜„ì¬ ìœ„ì¹˜
+            int adj_floor3[4][2] = { //ë˜ëŠ” ì¸ì ‘í•œ 4ì¹¸ í™•ì¸.
                 {row - 1, col},
                 {row + 1, col},
                 {row, col - 1},
@@ -1660,35 +1659,35 @@ void floor3() {
                 int ar_floor3 = adj_floor3[i_floor3][0];
                 int ac_floor3 = adj_floor3[i_floor3][1];
                 if (ar_floor3 >= 0 && ar_floor3 < ROWS && ac_floor3 >= 0 && ac_floor3 < COLS) {
-                    if (map_floor3[ar_floor3][ac_floor3] >= 2 && map_floor3[ar_floor3][ac_floor3] <= 20) //°ªÀÌ 2~20ÀÌ¸é »óÈ£ÀÛ¿ë °¡´ÉÇÑ ¿ÀºêÁ§Æ®
+                    if (map_floor3[ar_floor3][ac_floor3] >= 2 && map_floor3[ar_floor3][ac_floor3] <= 20) //ê°’ì´ 2~20ì´ë©´ ìƒí˜¸ì‘ìš© ê°€ëŠ¥í•œ ì˜¤ë¸Œì íŠ¸
                         cell_floor3 = map_floor3[ar_floor3][ac_floor3];
                 }
             }
 
             switch (cell_floor3) {
-            case 2: puzzle_301_floor3(); break; //301È£ ÆÛÁñ
-            case 3: puzzle_lab_floor3(); break; //±³¼ö´Ô¿¬±¸½Ç ÆÛÁñ
-            case 4: case 5: //°è´Ü
-                printf("\n  ¾Æ·¡·Î °¡´Â °è´ÜÀº ¸·Çô ÀÖ´Ù. ¿¤·¹º£ÀÌÅÍ¸¦ Å¸¾ß ÇÑ´Ù.\n");
+            case 2: puzzle_301_floor3(); break; //301í˜¸ í¼ì¦
+            case 3: puzzle_lab_floor3(); break; //êµìˆ˜ë‹˜ì—°êµ¬ì‹¤ í¼ì¦
+            case 4: case 5: //ê³„ë‹¨
+                printf("\n  ì•„ë˜ë¡œ ê°€ëŠ” ê³„ë‹¨ì€ ë§‰í˜€ ìˆë‹¤. ì—˜ë ˆë² ì´í„°ë¥¼ íƒ€ì•¼ í•œë‹¤.\n");
                 pressEnter_floor3();
                 break;
-            case 6: case 7: //¿¤º£ -> ¼º°ø ½Ã ·çÇÁ Á¾·á
+            case 6: case 7: //ì—˜ë²  -> ì„±ê³µ ì‹œ ë£¨í”„ ì¢…ë£Œ
                 if (elevator_floor3())
                     running_floor3 = 0;
                 break;
-            case 8: case 9: case 10: case 11: //Â¡°Ë´Ù¸® ÆÛÁñ
+            case 8: case 9: case 10: case 11: //ì§•ê²€ë‹¤ë¦¬ í¼ì¦
                 puzzle_locker_floor3();
                 break;
-            case 12: case 13: case 14:  //È­Àå½Ç ÆÛÁñ
+            case 12: case 13: case 14:  //í™”ì¥ì‹¤ í¼ì¦
                 puzzle_toilet_floor3();
                 break;
-            default: //±× ¿Ü
-                printf("  ÁÖº¯¿¡ »óÈ£ÀÛ¿ë ÇÒ °ÍÀÌ ¾ø´Ù.\n");
+            default: //ê·¸ ì™¸
+                printf("  ì£¼ë³€ì— ìƒí˜¸ì‘ìš© í•  ê²ƒì´ ì—†ë‹¤.\n");
             }
             continue;
         }
 
-        if (nr_floor3 >= 0 && nr_floor3 < ROWS && nc_floor3 >= 0 && nc_floor3 < COLS) { //º®¿¡¼­´Â ÀÌµ¿ X
+        if (nr_floor3 >= 0 && nr_floor3 < ROWS && nc_floor3 >= 0 && nc_floor3 < COLS) { //ë²½ì—ì„œëŠ” ì´ë™ X
             int t_floor3 = map_floor3[nr_floor3][nc_floor3];
 
             if (t_floor3 == 0) {
@@ -1699,10 +1698,10 @@ void floor3() {
     }
 }
 
-//2Ãş - 
+//2ì¸µ - 
 int vision_floor2 = 2;
 
-//2Ãş - 
+//2ì¸µ - 
 int map1_floor2[19][21] = {
    { 1,2,1,1,1,2,1,2,1,1,2,1,1,1,2,1,1,2,1,2,1 },
    { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1 },
@@ -1725,15 +1724,15 @@ int map1_floor2[19][21] = {
    { 1,1,1,1,1,2,1,1,2,1,1,2,1,1,1,2,1,1,2,1,1 }
 };
 
-//2Ãş - 
+//2ì¸µ - 
 char motga_floor2[7][128] = {
-   {"  ¦®¦¯     "},
-   {"  ¦²¦´     "},
-   {"  ???? ¡ü    ¡ü  ??"},
-   {"  ¦­¦®¦¬¦´(¢¥?¥ø ' ?)  ??"},
-   {"  ¦­¦­?¦´/    ¡Ò?"},
-   {"  ¦­¦²¦µ¦´ìÑ£ß__ªÄ_ªÄ(_()?:?*??"},
-   {"  ?¦¬¦¬?"}
+   {"  â”â”“     "},
+   {"  â”£â”«     "},
+   {"  ???? âˆ§    âˆ§  ??"},
+   {"  â”ƒâ”â”â”«(Â´?Ï‰ ' ?)  ??"},
+   {"  â”ƒâ”ƒ?â”«/    âŒ’?"},
+   {"  â”ƒâ”£â”»â”«äººï¼¿__ã¤_ã¤(_()?:?*??"},
+   {"  ?â”â”?"}
 };
 char flashlight_floor2[8][64] = {
    {"    \\  |  /   "},
@@ -1746,16 +1745,16 @@ char flashlight_floor2[8][64] = {
    {"     ||||     "}
 };
 
-//2Ãş - 
+//2ì¸µ - 
 void printMap_floor2(int map_floor2[19][21], int playerRow_floor2, int playerCol_floor2) {
     char symbol_floor2[10][1024] = {
        "  ",
        "\033[48;2;169;169;169m  \033[0m",
-       "\033[38;5;94m¹®\033[0m",
-       "\033[38;5;94m°è\033[0m",
-       "\033[38;5;94m´Ü\033[0m",
-       "\033[38;5;94m¿¤\033[0m",
-       "\033[38;5;94mº£\033[0m",
+       "\033[38;5;94më¬¸\033[0m",
+       "\033[38;5;94mê³„\033[0m",
+       "\033[38;5;94më‹¨\033[0m",
+       "\033[38;5;94mì—˜\033[0m",
+       "\033[38;5;94më² \033[0m",
        "\033[33m* \033[0m"
     };
 
@@ -1775,18 +1774,18 @@ void printMap_floor2(int map_floor2[19][21], int playerRow_floor2, int playerCol
     }
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void printPlayer_floor2(int row_floor2, int column_floor2) {
-    printf("\033[%d;%df¿Ê", row_floor2 + 1, column_floor2 * 2 + 1);
+    printf("\033[%d;%dfì˜·", row_floor2 + 1, column_floor2 * 2 + 1);
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void rendering_floor2(int map_floor2[19][21], int row_floor2, int column_floor2) {
     printMap_floor2(map_floor2, row_floor2, column_floor2);
     printPlayer_floor2(row_floor2, column_floor2);
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void back_floor2(char direction_floor2, int* row_floor2, int* column_floor2) {
     if ((direction_floor2 == 'w') || (direction_floor2 == 'W')) (*row_floor2)++;
     else if ((direction_floor2 == 's') || (direction_floor2 == 'S')) (*row_floor2)--;
@@ -1794,7 +1793,7 @@ void back_floor2(char direction_floor2, int* row_floor2, int* column_floor2) {
     else if ((direction_floor2 == 'd') || (direction_floor2 == 'D')) (*column_floor2)--;
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void M_floor2(int line_floor2, const char* msg_floor2) {
     printf("\033[%d;1f%s", line_floor2, msg_floor2);
     fflush(stdout);
@@ -1803,7 +1802,7 @@ void M_floor2(int line_floor2, const char* msg_floor2) {
     fflush(stdout);
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void move_floor2(char direction_floor2, int* row_floor2, int* column_floor2, int map_floor2[19][21]) {
     if (((direction_floor2 == 'w') || (direction_floor2 == 'W')) && (0 < *row_floor2) && (map_floor2[*row_floor2 - 1][*column_floor2] != 1))
         (*row_floor2)--;
@@ -1815,24 +1814,24 @@ void move_floor2(char direction_floor2, int* row_floor2, int* column_floor2, int
         (*column_floor2)++;
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void motgaevent_floor2(char direction_floor2, int* row_floor2, int* column_floor2) {
     for (int i_floor2 = 0; i_floor2 < 7; i_floor2++)
         printf("\033[%d;25f%s", i_floor2 + 7, motga_floor2[i_floor2]);
-    printf("\033[22;1f¾îµÎ¿ö¼­ ¸ø°¡°Ú¾î.. ¼ÕÀüµîÁ» Ã£¾ÆÁà.. ÀÌ Ãş ¾îµò°¡¿¡ ÀÖ¾î Ã£¾ÆÁÙ¶§ ±îÁö ¸øÁö³ª°¡!");
-    printf("\033[%d;%df¿Ê", *row_floor2 + 1, *column_floor2 * 2 + 1);
+    printf("\033[22;1fì–´ë‘ì›Œì„œ ëª»ê°€ê² ì–´.. ì†ì „ë“±ì¢€ ì°¾ì•„ì¤˜.. ì´ ì¸µ ì–´ë”˜ê°€ì— ìˆì–´ ì°¾ì•„ì¤„ë•Œ ê¹Œì§€ ëª»ì§€ë‚˜ê°€!");
+    printf("\033[%d;%dfì˜·", *row_floor2 + 1, *column_floor2 * 2 + 1);
     fflush(stdout);
     back_floor2(direction_floor2, row_floor2, column_floor2);
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void flEvent_floor2(int map_floor2[19][21], int* row_floor2, int* column_floor2, int* hasFlashlight_floor2) {
     printf("\033[2J\033[1;1f");
     for (int i_floor2 = 0; i_floor2 < 3; i_floor2++)
         printf("\033[%d;28f\033[33m%s\033[0m\n", i_floor2 + 6, flashlight_floor2[i_floor2]);
     for (int i_floor2 = 3; i_floor2 < 8; i_floor2++)
         printf("\033[%d;28f\033[37m%s\033[0m\n", i_floor2 + 6, flashlight_floor2[i_floor2]);
-    printf("\033[22;1f¼ÕÀüµîÀ» È¹µæÇß½À´Ï´Ù!");
+    printf("\033[22;1fì†ì „ë“±ì„ íšë“í–ˆìŠµë‹ˆë‹¤!");
     fflush(stdout);
     sleep(2);
     map_floor2[*row_floor2][*column_floor2] = 0;
@@ -1842,38 +1841,38 @@ void flEvent_floor2(int map_floor2[19][21], int* row_floor2, int* column_floor2,
     rendering_floor2(map_floor2, *row_floor2, *column_floor2);
 }
 
-//2Ãş - 
+//2ì¸µ - 
 void startprint_floor2() {
     printf("\033[2J\033[1;1f");
-    printf("\033[9;6f\033[31mÁ¤ÀüµÆ½À´Ï´Ù. ¸ÊÀÌ ¾îµÎ¿öÁı´Ï´Ù.\033[0m");
+    printf("\033[9;6f\033[31mì •ì „ëìŠµë‹ˆë‹¤. ë§µì´ ì–´ë‘ì›Œì§‘ë‹ˆë‹¤.\033[0m");
     fflush(stdout);
     sleep(2);
     printf("\033[9;6f\033[2K");
     fflush(stdout);
 }
 
-//1Ãş - ¸Ê Á¤ÀÇ
+//1ì¸µ - ë§µ ì •ì˜
 #define EMPTY 0
 #define WALL 1
 #define ATTACK 2
 #define MONSTER 3
 #define CURE 4
 
-//1Ãş - ¿£ÅÍ ÀÔ·Â ¹Ş±â ÇÔ¼ö
+//1ì¸µ - ì—”í„° ì…ë ¥ ë°›ê¸° í•¨ìˆ˜
 void enter() {
-    printf("\n[Enter¸¦ ´©¸£¸é °è¼Ó ÁøÇàÇÕ´Ï´Ù]");
+    printf("\n[Enterë¥¼ ëˆ„ë¥´ë©´ ê³„ì† ì§„í–‰í•©ë‹ˆë‹¤]");
     while (getchar() != '\n');
     getchar();
 }
 
-// 1Ãş - ½´ÆÃ°ÔÀÓ È­¸é ±×¸®±â
+// 1ì¸µ - ìŠˆíŒ…ê²Œì„ í™”ë©´ ê·¸ë¦¬ê¸°
 void shooting_floor1(int shootingmap[9][17], int player_row, int player_column) {
-    char symbol[5][1024] = { "  ", "\033[48;2;169;169;169m  \033[0m", "\033[31m !\033[0m", "\033[34m¸ğ\033[0m", "\033[31m +\033[0m" };
+    char symbol[5][1024] = { "  ", "\033[48;2;169;169;169m  \033[0m", "\033[31m !\033[0m", "\033[34mëª¨\033[0m", "\033[31m +\033[0m" };
 
     for (int row = 0; row < 9; row++) {
         for (int column = 0; column < 17; column++) {
             if (row == player_row && column == player_column) {
-                printf("¿Ê");
+                printf("ì˜·");
             }
             else {
                 printf("%s", symbol[shootingmap[row][column]]);
@@ -1883,7 +1882,7 @@ void shooting_floor1(int shootingmap[9][17], int player_row, int player_column) 
     }
 }
 
-// 1Ãş - ½´ÆÃ°ÔÀÓ Ä³¸¯ÅÍ ÀÌµ¿
+// 1ì¸µ - ìŠˆíŒ…ê²Œì„ ìºë¦­í„° ì´ë™
 void shootingcharacter_floor1(char direction, int* row, int* column, int shootingmap[9][17]) {
     if (((direction == 'w') || (direction == 'W')) && (0 < *row) && (shootingmap[*row - 1][*column] != 1))
         (*row)--;
@@ -1895,7 +1894,7 @@ void shootingcharacter_floor1(char direction, int* row, int* column, int shootin
         (*column)++;
 }
 
-//1Ãş - ½´ÆÃ°ÔÀÓ
+//1ì¸µ - ìŠˆíŒ…ê²Œì„
 int shoot(int bat) {
 
     int shootingmap[9][17] = {
@@ -1914,7 +1913,7 @@ int shoot(int bat) {
     char direction = 'w';
     srand(time(NULL));
 
-    //¹®À» ºÎ½¤¼­ ¿­¾úÀ» °æ¿ì HP 20, ¹®À» Ä«µåÅ°·Î ¿­¾úÀ» °æ¿ì HP 50
+    //ë¬¸ì„ ë¶€ìˆ´ì„œ ì—´ì—ˆì„ ê²½ìš° HP 20, ë¬¸ì„ ì¹´ë“œí‚¤ë¡œ ì—´ì—ˆì„ ê²½ìš° HP 50
     int HP = 50;
     int A_HP = 100;
     int heart = 3;
@@ -1922,16 +1921,16 @@ int shoot(int bat) {
 
     printf("\033[2J\033[1;1f");
     printf("=====================================\n\n");
-    printf("           <½´ÆÃ °ÔÀÓ ±ÔÄ¢>          \n\n");
-    printf(" '!'¿Í ´êÀ¸¸é AÀÇ Ã¼·ÂÀÌ 20 ±ğÀÔ´Ï´Ù.\n\n");
-    printf(" '¸ğ'¿Í ´êÀ¸¸é Ã¼·ÂÀÌ 10 ±ğÀÔ´Ï´Ù.   \n\n");
-    printf(" '+'¿Í ´êÀ¸¸é Ã¼·ÂÀÌ 5 ¿À¸¨´Ï´Ù.     \n\n ");
+    printf("           <ìŠˆíŒ… ê²Œì„ ê·œì¹™>          \n\n");
+    printf(" '!'ì™€ ë‹¿ìœ¼ë©´ Aì˜ ì²´ë ¥ì´ 20 ê¹ì…ë‹ˆë‹¤.\n\n");
+    printf(" 'ëª¨'ì™€ ë‹¿ìœ¼ë©´ ì²´ë ¥ì´ 10 ê¹ì…ë‹ˆë‹¤.   \n\n");
+    printf(" '+'ì™€ ë‹¿ìœ¼ë©´ ì²´ë ¥ì´ 5 ì˜¤ë¦…ë‹ˆë‹¤.     \n\n ");
     printf("=====================================\n\n");
     enter();
 
     if (bat == 1) {
         printf("================================================================\n\n");
-        printf("\n¾Ñ! ¹®À» ºÎ¼ö´Ù ´ÙÃÆ´ÂÁö ¼Õ¿¡¼­ ÇÇ°¡ ³³´Ï´Ù. Ã¼·ÂÀÌ ±ğÀÔ´Ï´Ù.\n\n");
+        printf("\nì•—! ë¬¸ì„ ë¶€ìˆ˜ë‹¤ ë‹¤ì³¤ëŠ”ì§€ ì†ì—ì„œ í”¼ê°€ ë‚©ë‹ˆë‹¤. ì²´ë ¥ì´ ê¹ì…ë‹ˆë‹¤.\n\n");
         printf("================================================================\n\n");
         HP -= 20;
         enter();
@@ -1945,9 +1944,9 @@ int shoot(int bat) {
         printf("\033[2J\033[1;1f");
 
         shooting_floor1(shootingmap, row, column);
-        printf("\n=============================\n AÀÇ Ã¼·Â: %d | ³ªÀÇ Ã¼·Â: %d\n=============================\n", A_HP, HP);
+        printf("\n=============================\n Aì˜ ì²´ë ¥: %d | ë‚˜ì˜ ì²´ë ¥: %d\n=============================\n", A_HP, HP);
 
-        printf("¹æÇâÅ°(WASD) ÀÔ·Â: ");
+        printf("ë°©í–¥í‚¤(WASD) ì…ë ¥: ");
         scanf(" %c", &direction);
         shootingcharacter_floor1(direction, &row, &column, shootingmap);
 
@@ -1987,19 +1986,19 @@ int shoot(int bat) {
 
 
 
-        // 5. Ãæµ¹ ÆÇÁ¤
+        // 5. ì¶©ëŒ íŒì •
         if (shootingmap[row][column] == MONSTER) {
-            printf("¾Æ¾ß!\n");
+            printf("ì•„ì•¼!\n");
             HP -= 10;
         }
         else if (shootingmap[row][column] == ATTACK) {
-            printf("°ø°İ!\n");
+            printf("ê³µê²©!\n");
             A_HP -= 20;
             shootingmap[row][column] = EMPTY;
 
         }
         else if (shootingmap[row][column] == CURE) {
-            printf("Ã¼·Â È¸º¹!\n");
+            printf("ì²´ë ¥ íšŒë³µ!\n");
             HP += 5;
         }
 
@@ -2007,21 +2006,21 @@ int shoot(int bat) {
             A_HP = 0;
             printf("\033[2J\033[1;1f");
             shooting_floor1(shootingmap, row, column);
-            printf("\n=============================\n AÀÇ Ã¼·Â: %d | ³ªÀÇ Ã¼·Â: %d\n=============================\n", A_HP, HP);
+            printf("\n=============================\n Aì˜ ì²´ë ¥: %d | ë‚˜ì˜ ì²´ë ¥: %d\n=============================\n", A_HP, HP);
 
             printf("\n===================================================\n");
-            printf("AÀÇ Ã¼·ÂÀÌ ¹Ù´Ú³µ½À´Ï´Ù.\n");
+            printf("Aì˜ ì²´ë ¥ì´ ë°”ë‹¥ë‚¬ìŠµë‹ˆë‹¤.\n");
             printf("===================================================\n");
             break;
         }
 
 
 
-        // ÇÃ·¹ÀÌ¾î »ç¸Á
+        // í”Œë ˆì´ì–´ ì‚¬ë§
         else if (HP <= 0) {
             printf("\033[2J\033[1;1f");
             printf("===================================================\n\n");
-            printf("Ã¼·ÂÀÌ ¹Ù´Ú³µ½À´Ï´Ù.\n\n");
+            printf("ì²´ë ¥ì´ ë°”ë‹¥ë‚¬ìŠµë‹ˆë‹¤.\n\n");
             printf("===================================================\n");
             printf("");
 
@@ -2029,7 +2028,7 @@ int shoot(int bat) {
 
             printf("\033[2J\033[1;1f");
             printf("===================================================\n\n");
-            printf("ÇÏÁö¸¸ ¿©±â¼­ Æ÷±âÇÒ ¼ö´Â ¾ø½À´Ï´Ù.\n\n");
+            printf("í•˜ì§€ë§Œ ì—¬ê¸°ì„œ í¬ê¸°í•  ìˆ˜ëŠ” ì—†ìŠµë‹ˆë‹¤.\n\n");
             printf("===================================================\n");
             printf("");
 
@@ -2049,56 +2048,56 @@ int shoot(int bat) {
     enter();
 
     printf("\033[2J\033[1;1f\n\n");
-    printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+    printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
     printf("         |  \033[31mStop deleting files...  \033[37m|   \n");
-    printf("         |        (Áß°£°í»ç)        |   \n");
+    printf("         |        (ì¤‘ê°„ê³ ì‚¬)        |   \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
-    printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+    printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
     printf("                     |  |               \n");
     printf("                     |  |               \n");
-    printf("       ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ \n\n");
-    printf("                     < °Ô ÀÓ Àü °ø >    \n\n");
+    printf("       ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ \n\n");
+    printf("                     < ê²Œ ì„ ì „ ê³µ >    \n\n");
     enter();
     printf("\033[2J\033[1;1f \n\n");
-    printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+    printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
     printf("         |    \033[31mrecovering files...   \033[37m|   \n");
-    printf("         |        (Áß°£°í»ç)        |   \n");
+    printf("         |        (ì¤‘ê°„ê³ ì‚¬)        |   \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
-    printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+    printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
     printf("                     |  |               \n");
     printf("                     |  |               \n");
-    printf("       ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ \n\n");
-    printf("                     < °Ô ÀÓ Àü °ø >    \n\n");
+    printf("       ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ \n\n");
+    printf("                     < ê²Œ ì„ ì „ ê³µ >    \n\n");
     enter();
     printf("\033[2J\033[1;1f \n\n");
-    printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+    printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
     printf("         |         \033[31mcomplete!        \033[37m|   \n");
-    printf("         |        (Áß°£°í»ç)        |   \n");
+    printf("         |        (ì¤‘ê°„ê³ ì‚¬)        |   \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
     printf("         |                          |   \n");
-    printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+    printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
     printf("                     |  |               \n");
     printf("                     |  |               \n");
-    printf("       ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ \n\n");
-    printf("                     < °Ô ÀÓ Àü °ø >    \n\n");
+    printf("       ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ \n\n");
+    printf("                     < ê²Œ ì„ ì „ ê³µ >    \n\n");
 
     enter();
     printf("\033[2J\033[1;1f \n\n");
     printf("===================================================\n\n");
-    printf(" Á¤¹®ÀÌ ¿­¸®ÀÚ °æºñ¿øºĞ²²¼­ ´Ù±ŞÈ÷ ´Ş·Á¿À¼Ì´Ù.     \n");
-    printf(" ³ª´Â ´õ ´Ê±â Àü¿¡ ¸·Â÷¸¦ Å¸°í ÁıÀ¸·Î °¥ ¼ö ÀÖ¾ú°í,\n");
-    printf(" ±×³¯ ÀÌÈÄ·Î ´Ù½Ã´Â ±× Ä£±¸¸¦ ¸¸³¯ ¼ö ¾ø¾ú´Ù.      \n\n");
+    printf(" ì •ë¬¸ì´ ì—´ë¦¬ì ê²½ë¹„ì›ë¶„ê»˜ì„œ ë‹¤ê¸‰íˆ ë‹¬ë ¤ì˜¤ì…¨ë‹¤.     \n");
+    printf(" ë‚˜ëŠ” ë” ëŠ¦ê¸° ì „ì— ë§‰ì°¨ë¥¼ íƒ€ê³  ì§‘ìœ¼ë¡œ ê°ˆ ìˆ˜ ìˆì—ˆê³ ,\n");
+    printf(" ê·¸ë‚  ì´í›„ë¡œ ë‹¤ì‹œëŠ” ê·¸ ì¹œêµ¬ë¥¼ ë§Œë‚  ìˆ˜ ì—†ì—ˆë‹¤.      \n\n");
     printf("===================================================\n");
     enter();
 
@@ -2124,7 +2123,7 @@ int shoot(int bat) {
 
 }
 
-//1Ãş - Áß¾Ó¸Ê 
+//1ì¸µ - ì¤‘ì•™ë§µ 
 void printMap_floor1(int map1[9][9], int player_row, int player_column) {
     char symbol[30][1024] = { "  ", "\033[48;2;169;169;169m  \033[0m", "\033[34m >\033[0m", "\033[34m< \033[0m" };
     printf("\033[2J\033[1;1f");
@@ -2132,7 +2131,7 @@ void printMap_floor1(int map1[9][9], int player_row, int player_column) {
         for (int column = 0; column < 9; column++) {
 
             if (row == player_row && column == player_column) {
-                printf("¿Ê");
+                printf("ì˜·");
             }
             else {
                 printf("%s", symbol[map1[row][column]]);
@@ -2142,7 +2141,7 @@ void printMap_floor1(int map1[9][9], int player_row, int player_column) {
     }
 }
 
-//1Ãş - Áß¾Ó¸Ê ÀÌµ¿
+//1ì¸µ - ì¤‘ì•™ë§µ ì´ë™
 void move_floor1(char direction, int* row, int* column, int map1[9][9]) {
     if (((direction == 'w') || (direction == 'W')) && (0 < *row) && (map1[*row - 1][*column] != 1))
         (*row)--;
@@ -2154,15 +2153,15 @@ void move_floor1(char direction, int* row, int* column, int map1[9][9]) {
         (*column)++;
 }
 
-//1Ãş - ·Îºñ¸Ê
+//1ì¸µ - ë¡œë¹„ë§µ
 void lobby_floor1(int map_lobby[7][9], int player_row, int player_column) {
-    char symbol[20][1024] = { "  ", "\033[48;2;169;169;169m  \033[0m", "\033[34m¹®\033[0m", "\033[34m¸ø\033[0m" };
+    char symbol[20][1024] = { "  ", "\033[48;2;169;169;169m  \033[0m", "\033[34më¬¸\033[0m", "\033[34mëª»\033[0m" };
     printf("\033[2J\033[1;1f");
     for (int row = 0; row < 7; row++) {
         for (int column = 0; column < 9; column++) {
 
             if (row == player_row && column == player_column) {
-                printf("¿Ê");
+                printf("ì˜·");
             }
             else {
                 printf("%s", symbol[map_lobby[row][column]]);
@@ -2172,7 +2171,7 @@ void lobby_floor1(int map_lobby[7][9], int player_row, int player_column) {
     }
 }
 
-//1Ãş - ·Îºñ ÀÌµ¿
+//1ì¸µ - ë¡œë¹„ ì´ë™
 void lobbymove_floor1(char direction, int* row, int* column, int map[7][9]) {
     if (((direction == 'w') || (direction == 'W')) && (0 < *row) && (map[*row - 1][*column] != 1))
         (*row)--;
@@ -2184,15 +2183,15 @@ void lobbymove_floor1(char direction, int* row, int* column, int map[7][9]) {
         (*column)++;
 }
 
-//1Ãş - °ú»ç¹«½Ç
+//1ì¸µ - ê³¼ì‚¬ë¬´ì‹¤
 void office_floor1(int map_office[10][15], int player_row, int player_column) {
-    char symbol[30][1024] = { "  ", "\033[48;2;169;169;169m  \033[0m", "\033[34m¸ğ\033[0m", "\033[34m>\033[0m", "\033[34mÈª\033[0m" };
+    char symbol[30][1024] = { "  ", "\033[48;2;169;169;169m  \033[0m", "\033[34mëª¨\033[0m", "\033[34m>\033[0m", "\033[34mí™‹\033[0m" };
     printf("\033[2J\033[1;1f");
     for (int row = 0; row < 10; row++) {
         for (int column = 0; column < 15; column++) {
 
             if (row == player_row && column == player_column) {
-                printf("¿Ê");
+                printf("ì˜·");
             }
             else {
                 printf("%s", symbol[map_office[row][column]]);
@@ -2202,7 +2201,7 @@ void office_floor1(int map_office[10][15], int player_row, int player_column) {
     }
 }
 
-//1Ãş - °ú»ç¹«½Ç ÀÌµ¿
+//1ì¸µ - ê³¼ì‚¬ë¬´ì‹¤ ì´ë™
 void officemove_floor1(char direction, int* row, int* column, int map[10][15]) {
     if (((direction == 'w') || (direction == 'W')) && (0 < *row) && (map[*row - 1][*column] != 1))
         (*row)--;
@@ -2214,7 +2213,7 @@ void officemove_floor1(char direction, int* row, int* column, int map[10][15]) {
         (*column)++;
 }
 
-//°ÔÀÓ ½ÃÀÛ
+//ê²Œì„ ì‹œì‘
 int main() {
     game_start();
     while (1) {
@@ -2238,9 +2237,9 @@ int main() {
                 move_floor2(direction_floor2, &row_floor2, &column_floor2, map1_floor2);
                 rendering_floor2(map1_floor2, row_floor2, column_floor2);
                 if (map1_floor2[row_floor2][column_floor2] == 2)
-                    M_floor2(22, "¹®ÀÌ Àá°ÜÀÖ´Ù.");
+                    M_floor2(22, "ë¬¸ì´ ì ê²¨ìˆë‹¤.");
                 if ((map1_floor2[row_floor2][column_floor2] == 5) || (map1_floor2[row_floor2][column_floor2] == 6)) {
-                    M_floor2(22, "¿¤¸®º£ÀÌÅÍ°¡ ÀÛµ¿ÇÏÁö ¾Ê´Â´Ù.");
+                    M_floor2(22, "ì—˜ë¦¬ë² ì´í„°ê°€ ì‘ë™í•˜ì§€ ì•ŠëŠ”ë‹¤.");
                     back_floor2(direction_floor2, &row_floor2, &column_floor2);
                     rendering_floor2(map1_floor2, row_floor2, column_floor2);
                 }
@@ -2261,7 +2260,7 @@ int main() {
                     break;
                 }
 
-                printf("\033[21;1f\033[2K¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+                printf("\033[21;1f\033[2Kë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
                 scanf(" %c", &direction_floor2);
             }
             break;
@@ -2339,28 +2338,28 @@ int main() {
 
                             else {
                                 printf("\033[2J\033[1;1f");
-                                printf("\033[37m                  ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó         ¤Ñ¤Ñ        ¤Ó\n");
-                                printf("\033[37m                 ¤Ó        ¤Ó  ¤Ó       ¤Ó\n");
-                                printf("\033[31m   ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \033[37m¤Ó        ¤Ó  ¤Ó       ¤Ó\n");
-                                printf("\033[31m  ¤Ó password ¤Ó \033[37m¤Ó        ¤Ó  ¤Ó       ¤Ó\n");
-                                printf("\033[31m  ¤Ó          ¤Ó \033[37m¤Ó        ¤Ó  ¤Ó       ¤Ó\n");
-                                printf("\033[31m  ¤Ó          ¤Ó \033[37m¤Ó         ¤Ñ¤Ñ        ¤Ó\n");
-                                printf("\033[31m  ¤Ó          ¤Ó \033[37m¤Ó                  ¤· ¤Ó\n");
-                                printf("\033[31m   ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \033[37m¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                printf("\033[37m                 ¤Ó                     ¤Ó\n");
+                                printf("\033[37m                  ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£         ã…¡ã…¡        ã…£\n");
+                                printf("\033[37m                 ã…£        ã…£  ã…£       ã…£\n");
+                                printf("\033[31m   ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \033[37mã…£        ã…£  ã…£       ã…£\n");
+                                printf("\033[31m  ã…£ password ã…£ \033[37mã…£        ã…£  ã…£       ã…£\n");
+                                printf("\033[31m  ã…£          ã…£ \033[37mã…£        ã…£  ã…£       ã…£\n");
+                                printf("\033[31m  ã…£          ã…£ \033[37mã…£         ã…¡ã…¡        ã…£\n");
+                                printf("\033[31m  ã…£          ã…£ \033[37mã…£                  ã…‡ ã…£\n");
+                                printf("\033[31m   ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \033[37mã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
+                                printf("\033[37m                 ã…£                     ã…£\n");
                                 printf("=====================================================\n");
-                                printf("|                      Àá°ÜÀÖ´Ù.                     |\n");
+                                printf("|                      ì ê²¨ìˆë‹¤.                     |\n");
                                 printf("=====================================================\n\n");
-                                printf("1. ºÎ¼ø´Ù.\n");
-                                printf("2. ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÑ´Ù.\n");
+                                printf("1. ë¶€ìˆœë‹¤.\n");
+                                printf("2. ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•œë‹¤.\n");
                                 scanf("%d", &office);
 
                                 if (office == 1) {
@@ -2368,25 +2367,25 @@ int main() {
 
                                     if (bat == 1) {
                                         skip++;
-                                        printf("ºÎ¼öÀÚ!");
+                                        printf("ë¶€ìˆ˜ì!");
                                         printf("\033[2J\033[1;1f");
-                                        printf("\033[37m                  ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \n");
-                                        printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó                     ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó         ¤Ñ¤Ñ        ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó        ¤Ó  ¤Ó  ¤Ñ¤Ñ¤Ñ \n");
-                                        printf("\033[31m   ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \033[37m¤Ó       /             \n");
-                                        printf("\033[31m  ¤Ó password ¤Ó \033[37m¤Ó   /¤Ñ               \n");
-                                        printf("\033[31m  ¤Ó          ¤Ó \033[37m¤Ó  /                  \n");
-                                        printf("\033[31m  ¤Ó          ¤Ó \033[37m¤Ó /                   \n");
-                                        printf("\033[31m  ¤Ó          ¤Ó \033[37m¤Ó/                    \n");
-                                        printf("\033[31m   ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \033[37m /                     \n");
-                                        printf("\033[37m                 ¤Ó   ¤Ñ /               ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó      |               ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó       |              ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó        ¤Ñ¤Ñ          ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó            |         ¤Ó\n");
-                                        printf("\033[37m                 ¤Ó             |¤Ñ¤Ñ¤Ñ¤Ñ¤Ó\n");
+                                        printf("\033[37m                  ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \n");
+                                        printf("\033[37m                 ã…£                     ã…£\n");
+                                        printf("\033[37m                 ã…£                     ã…£\n");
+                                        printf("\033[37m                 ã…£         ã…¡ã…¡        ã…£\n");
+                                        printf("\033[37m                 ã…£        ã…£  ã…£  ã…¡ã…¡ã…¡ \n");
+                                        printf("\033[31m   ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \033[37mã…£       /             \n");
+                                        printf("\033[31m  ã…£ password ã…£ \033[37mã…£   /ã…¡               \n");
+                                        printf("\033[31m  ã…£          ã…£ \033[37mã…£  /                  \n");
+                                        printf("\033[31m  ã…£          ã…£ \033[37mã…£ /                   \n");
+                                        printf("\033[31m  ã…£          ã…£ \033[37mã…£/                    \n");
+                                        printf("\033[31m   ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \033[37m /                     \n");
+                                        printf("\033[37m                 ã…£   ã…¡ /               ã…£\n");
+                                        printf("\033[37m                 ã…£      |               ã…£\n");
+                                        printf("\033[37m                 ã…£       |              ã…£\n");
+                                        printf("\033[37m                 ã…£        ã…¡ã…¡          ã…£\n");
+                                        printf("\033[37m                 ã…£            |         ã…£\n");
+                                        printf("\033[37m                 ã…£             |ã…¡ã…¡ã…¡ã…¡ã…£\n");
                                         enter();
                                         stage = 2;
                                         row = 1;
@@ -2395,7 +2394,7 @@ int main() {
 
                                     else if (bat == 0) {
                                         printf("=====================================\n\n");
-                                        printf(" µµ±¸°¡ ÇÊ¿äÇÒ °Í °°´Ù. \n\n");
+                                        printf(" ë„êµ¬ê°€ í•„ìš”í•  ê²ƒ ê°™ë‹¤. \n\n");
                                         printf("=====================================\n\n");
                                         enter();
                                         row = 2; column = 1;
@@ -2405,37 +2404,37 @@ int main() {
                                 else if (office == 2) {
                                     printf("\033[2J\033[1;1f");
                                     printf("=====================================\n\n");
-                                    printf("              ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \n");
-                                    printf("             ¤Ó password ¤Ó \n");
-                                    printf("             ¤Ó          ¤Ó \n");
-                                    printf("             ¤Ó          ¤Ó \n");
-                                    printf("             ¤Ó 1  2  3  ¤Ó \n");
-                                    printf("             ¤Ó          ¤Ó \n");
-                                    printf("             ¤Ó 4  5  6  ¤Ó \n");
-                                    printf("             ¤Ó          ¤Ó \n");
-                                    printf("             ¤Ó 7  8  9  ¤Ó \n");
-                                    printf("             ¤Ó          ¤Ó \n");
-                                    printf("              ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \n");
+                                    printf("              ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \n");
+                                    printf("             ã…£ password ã…£ \n");
+                                    printf("             ã…£          ã…£ \n");
+                                    printf("             ã…£          ã…£ \n");
+                                    printf("             ã…£ 1  2  3  ã…£ \n");
+                                    printf("             ã…£          ã…£ \n");
+                                    printf("             ã…£ 4  5  6  ã…£ \n");
+                                    printf("             ã…£          ã…£ \n");
+                                    printf("             ã…£ 7  8  9  ã…£ \n");
+                                    printf("             ã…£          ã…£ \n");
+                                    printf("              ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \n");
                                     printf("=====================================\n\n");
-                                    printf("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. ");
+                                    printf("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ");
                                     scanf("%d", &password);
 
                                     if (password == 5114) {
                                         printf("\033[2J\033[1;1f");
                                         printf("=====================================\n\n");
-                                        printf("              ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \n");
-                                        printf("             ¤Ó password ¤Ó \n");
-                                        printf("             ¤Ó          ¤Ó \n");
-                                        printf("             ¤Ó          ¤Ó \n");
-                                        printf("             ¤Ó          ¤Ó \n");
-                                        printf("             ¤Ó  UNLOCK  ¤Ó \n");
-                                        printf("             ¤Ó          ¤Ó \n");
-                                        printf("             ¤Ó          ¤Ó \n");
-                                        printf("             ¤Ó          ¤Ó \n");
-                                        printf("             ¤Ó          ¤Ó \n");
-                                        printf("              ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ  \n");
+                                        printf("              ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \n");
+                                        printf("             ã…£ password ã…£ \n");
+                                        printf("             ã…£          ã…£ \n");
+                                        printf("             ã…£          ã…£ \n");
+                                        printf("             ã…£          ã…£ \n");
+                                        printf("             ã…£  UNLOCK  ã…£ \n");
+                                        printf("             ã…£          ã…£ \n");
+                                        printf("             ã…£          ã…£ \n");
+                                        printf("             ã…£          ã…£ \n");
+                                        printf("             ã…£          ã…£ \n");
+                                        printf("              ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡  \n");
                                         printf("=====================================\n\n");
-                                        printf("º¸¾ÈÀÌ ÇØÁ¦µË´Ï´Ù.");
+                                        printf("ë³´ì•ˆì´ í•´ì œë©ë‹ˆë‹¤.");
                                         skip++;
                                         enter();
                                         stage = 2;
@@ -2453,37 +2452,37 @@ int main() {
                         if (map_lobby[row][column] == 3) {
                             printf("\033[2J\033[1;1f");
                             printf("=====================================\n\n");
-                            printf(" 'ÀÌ ºĞÀº ¿Ö ¾ÆÁ÷ ¾È ³ª°¡½Å °É±î?'   \n\n");
+                            printf(" 'ì´ ë¶„ì€ ì™œ ì•„ì§ ì•ˆ ë‚˜ê°€ì‹  ê±¸ê¹Œ?'   \n\n");
                             printf("=====================================\n");
                             enter();
 
                             printf("\033[2J\033[1;1f");
                             printf("=====================================\n\n");
-                            printf(" °ú»ç¹«½Ç °¡º¸¼Ì¾î¿ä?\n");
-                            printf(" °Å±â¼­ ¹º°¡... ÀÌ»óÇÑ ÀÏÀÌ ¹ú¾îÁö°í ÀÖ¾î¿ä.\n");
-                            printf(" ÀúÈñ¸¦ °¡µĞ »ç¶÷µµ ¾Æ¸¶...\n\n");
+                            printf(" ê³¼ì‚¬ë¬´ì‹¤ ê°€ë³´ì…¨ì–´ìš”?\n");
+                            printf(" ê±°ê¸°ì„œ ë­”ê°€... ì´ìƒí•œ ì¼ì´ ë²Œì–´ì§€ê³  ìˆì–´ìš”.\n");
+                            printf(" ì €í¬ë¥¼ ê°€ë‘” ì‚¬ëŒë„ ì•„ë§ˆ...\n\n");
                             printf("=====================================\n");
-                            printf(" °ú»ç¹«½ÇÀ» µé·È´Ù¸é > 1\n");
-                            printf(" µé¸®Áö ¾Ê¾Ò´Ù¸é > 2\n¼±ÅÃ: ");
+                            printf(" ê³¼ì‚¬ë¬´ì‹¤ì„ ë“¤ë ¸ë‹¤ë©´ > 1\n");
+                            printf(" ë“¤ë¦¬ì§€ ì•Šì•˜ë‹¤ë©´ > 2\nì„ íƒ: ");
                             scanf("%d", &lobby);
 
                             if (lobby == 1) {
                                 printf("\033[2J\033[1;1f");
                                 printf("=====================================\n\n");
-                                printf("1. ¹®À» ºÎ¼ú µµ±¸¿¡ ´ëÇØ Áú¹®ÇÏ±â    \n");
-                                printf("2. ºñ¹Ğ¹øÈ£¿¡ ´ëÇØ Áú¹®ÇÏ±â          \n\n");
+                                printf("1. ë¬¸ì„ ë¶€ìˆ  ë„êµ¬ì— ëŒ€í•´ ì§ˆë¬¸í•˜ê¸°    \n");
+                                printf("2. ë¹„ë°€ë²ˆí˜¸ì— ëŒ€í•´ ì§ˆë¬¸í•˜ê¸°          \n\n");
                                 printf("=====================================\n");
-                                printf("¼±ÅÃ: ");
+                                printf("ì„ íƒ: ");
                                 scanf("%d", &lobby2);
 
                                 if (lobby2 == 1) {
                                     printf("\033[2J\033[1;1f");
                                     printf("=====================================\n\n");
-                                    printf(" ¹«±â¿ä? ¾Æ, ¾ß±¸ µ¿¾Æ¸®°¡           \n");
-                                    printf(" Àú±â ¾ß±¸ ¹èÆ®¸¦ µÎ°í °¬´øµ¥...     \n");
-                                    printf(" ... ¿©±â, ÀÌ°É ½áº¸¼¼¿ä.            \n\n");
+                                    printf(" ë¬´ê¸°ìš”? ì•„, ì•¼êµ¬ ë™ì•„ë¦¬ê°€           \n");
+                                    printf(" ì €ê¸° ì•¼êµ¬ ë°°íŠ¸ë¥¼ ë‘ê³  ê°”ë˜ë°...     \n");
+                                    printf(" ... ì—¬ê¸°, ì´ê±¸ ì¨ë³´ì„¸ìš”.            \n\n");
                                     printf("=====================================\n");
-                                    printf("¾ß±¸ ¹èÆ® È¹µæ!");
+                                    printf("ì•¼êµ¬ ë°°íŠ¸ íšë“!");
 
                                     bat++;
                                     enter();
@@ -2492,9 +2491,9 @@ int main() {
                                 else if (lobby2 == 2) {
                                     printf("\033[2J\033[1;1f");
                                     printf("=====================================\n\n");
-                                    printf(" ¾Æ, Àúµµ ÀÚ¼¼È÷´Â ¸ğ¸£´Âµ¥          \n");
-                                    printf(" ÇĞ±³ ÀüÈ­¹øÈ£ ¸Ç µŞÀÚ¸® 4°³ÀÏ °É¿ä? \n");
-                                    printf(" È¨ÆäÀÌÁö¿¡ ÀÖÀ» °Å¿¹¿ä.             \n\n");
+                                    printf(" ì•„, ì €ë„ ìì„¸íˆëŠ” ëª¨ë¥´ëŠ”ë°          \n");
+                                    printf(" í•™êµ ì „í™”ë²ˆí˜¸ ë§¨ ë’·ìë¦¬ 4ê°œì¼ ê±¸ìš”? \n");
+                                    printf(" í™ˆí˜ì´ì§€ì— ìˆì„ ê±°ì˜ˆìš”.             \n\n");
                                     printf("=====================================\n");
                                     enter();
                                 }
@@ -2516,25 +2515,25 @@ int main() {
                         if (map_office[row][column] == 4) {
                             printf("\033[2J\033[1;1f");
                             printf("\n");
-                            printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+                            printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
                             printf("         |                          |   \n");
                             printf("         |                          |   \n");
                             printf("         | files are deleting...10% |   \n");
-                            printf("         |        (Áß°£°í»ç)        |   \n");
+                            printf("         |        (ì¤‘ê°„ê³ ì‚¬)        |   \n");
                             printf("         |                          |   \n");
                             printf("         |                          |   \n");
                             printf("         |                          |   \n");
-                            printf("          ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    \n");
+                            printf("          ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    \n");
                             printf("                     |  |               \n");
                             printf("                     |  |               \n");
-                            printf("       ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ    ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ \n\n");
-                            printf("                     < °Ô ÀÓ Àü °ø >    \n\n");
+                            printf("       ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡    ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ã…¡ \n\n");
+                            printf("                     < ê²Œ ì„ ì „ ê³µ >    \n\n");
                             printf("=============================================\n\n");
-                            printf(" °ú µ¿±â A: ¾ÈµÅ! ¹æÇØÇÏÁö¸¶!                \n\n");
-                            printf(" ³ª: Áö±İ ¹¹ÇÏ´Â °Å¾ß? ÆÄÀÏ »èÁ¦ Áß?         \n\n");
-                            printf(" A : ÀÌ ¼ºÀûÀ¸·Î ÇĞÁ¡ÀÌ ³ª¿Í¼­´Â ¾ÈµÅ...     \n");
-                            printf("     ´Ù½Ã ±âÈ¸¸¦ ¾òÀ» ¼ö¸¸ ÀÖ´Ù¸é          \n");
-                            printf("   : ³­ ¹«¾ùÀÌµç ÇÒ ¼ö ÀÖ¾î.                 \n\n");
+                            printf(" ê³¼ ë™ê¸° A: ì•ˆë¼! ë°©í•´í•˜ì§€ë§ˆ!                \n\n");
+                            printf(" ë‚˜: ì§€ê¸ˆ ë­í•˜ëŠ” ê±°ì•¼? íŒŒì¼ ì‚­ì œ ì¤‘?         \n\n");
+                            printf(" A : ì´ ì„±ì ìœ¼ë¡œ í•™ì ì´ ë‚˜ì™€ì„œëŠ” ì•ˆë¼...     \n");
+                            printf("     ë‹¤ì‹œ ê¸°íšŒë¥¼ ì–»ì„ ìˆ˜ë§Œ ìˆë‹¤ë©´          \n");
+                            printf("   : ë‚œ ë¬´ì—‡ì´ë“  í•  ìˆ˜ ìˆì–´.                 \n\n");
                             printf("=============================================\n");
                             enter();
                             shoot(bat);
@@ -2561,13 +2560,13 @@ int main() {
                         office_floor1(map_office, row, column);
                     }
 
-                    printf("\033[12;1f\033[2K¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+                    printf("\033[12;1f\033[2Kë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
                     scanf("\n%c", &direction);
                 }
 
                 else {
-                    printf("WASD¸¦ ´­·¯ÁÖ¼¼¿ä!");
-                    printf("\033[12;1f\033[2K¹æÇâÅ°(WASD)¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+                    printf("WASDë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”!");
+                    printf("\033[12;1f\033[2Kë°©í–¥í‚¤(WASD)ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
                     scanf("\n%c", &direction);
                 }
             }
